@@ -1,0 +1,16 @@
+---
+description: Prismic Slice Machine slice development conventions
+globs: src/slices/**/*.tsx
+alwaysApply: false
+---
+
+# Slice Conventions
+
+- Import design tokens: `import { theme } from "@/lib/master-theme"`
+- Import company data: `import { company } from "@/lib/company"` (never hardcode)
+- Use Prismic components: `PrismicRichText`, `PrismicNextImage`, `PrismicNextLink`, `PrismicText`
+- Type props: `SliceComponentProps<Content.XxxSlice>` from `@prismicio/client` and `@prismicio/react`
+- Wrap in `<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>`
+- Server component by default (no `"use client"` unless interactive elements)
+- Use Prismic MCP tools for content modeling: `how_to_model_slice`, `how_to_code_slice`, `save_slice_data`
+- model.json and mocks.json are managed by Slice Machine — edit via MCP tools or Slice Machine UI, not manually

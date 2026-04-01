@@ -76,7 +76,43 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = PageDocument;
+/**
+ * Content for Layout documents
+ */
+interface LayoutDocumentData {
+  site_title: prismic.KeyTextField;
+  site_description: prismic.KeyTextField;
+  header_logo: prismic.ImageField<never>;
+  nav_links: prismic.GroupField<{
+    label: prismic.KeyTextField;
+    link: prismic.LinkField;
+  }>;
+  footer_logo: prismic.ImageField<never>;
+  footer_links: prismic.GroupField<{
+    label: prismic.KeyTextField;
+    link: prismic.LinkField;
+  }>;
+  email: prismic.KeyTextField;
+  phone: prismic.KeyTextField;
+  address: prismic.KeyTextField;
+}
+
+/**
+ * Layout document from Prismic
+ *
+ * - **API ID**: `layout`
+ * - **Repeatable**: `false`
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LayoutDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<LayoutDocumentData>,
+    "layout",
+    Lang
+  >;
+
+export type AllDocumentTypes = PageDocument | LayoutDocument;
 
 /**
  * Primary content in *RichText → Primary*
@@ -136,6 +172,8 @@ declare module "@prismicio/client" {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      LayoutDocument,
+      LayoutDocumentData,
       AllDocumentTypes,
       RichTextSlice,
       RichTextSliceDefaultPrimary,

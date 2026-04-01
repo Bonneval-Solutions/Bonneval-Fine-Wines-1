@@ -1,0 +1,98 @@
+{
+  "company": {
+    "name": "Bonneval Fine Wines",
+    "tagline": "Sole importer. Ten domaines. By invitation.",
+    "description": "Sofia's sole gateway to ten of Burgundy's most revered domaines.",
+    "owner": {
+      "name": "",
+      "role": "Founder",
+      "email": "jean@bonnevalfinewines.com",
+      "phone": ""
+    },
+    "address": {
+      "street": "",
+      "city": "Sofia",
+      "postcode": "",
+      "country": "Bulgaria"
+    },
+    "contact": {
+      "email": "jean@bonnevalfinewines.com",
+      "phone": "",
+      "whatsapp": ""
+    },
+    "social": {
+      "linkedin": "",
+      "instagram": "",
+      "facebook": "",
+      "twitter": "",
+      "youtube": ""
+    },
+    "legal": {
+      "registrationNumber": "",
+      "vatNumber": "",
+      "privacyPolicyUrl": "/privacy-policy",
+      "termsUrl": "/terms",
+      "cookiePolicyUrl": "/cookie-policy"
+    }
+  },
+  "branding": {
+    "logo": {
+      "light": "/images/logo-light.svg",
+      "dark": "/images/logo-dark.svg",
+      "favicon": "/favicon.ico"
+    },
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "Inter",
+      "accent": ""
+    },
+    "colors": {
+      "primary": "#2C1018",
+      "secondary": "#C2A355",
+      "accent": "#6B7D6B",
+      "background": "#F5F0E8",
+      "foreground": "#1A1A1A",
+      "muted": "#8B8590",
+      "mutedForeground": "#8B8590"
+    },
+    "gradients": {
+      "primary": "",
+      "hero": ""
+    },
+    "borderRadius": "0.25rem",
+    "shadows": {
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1)"
+    }
+  },
+  "integrations": {
+    "prismic": {
+      "repositoryName": "bonneval-fine-wines"
+    },
+    "supabase": {
+      "projectUrl": "",
+      "anonKey": ""
+    },
+    "clerk": {
+      "publishableKey": ""
+    },
+    "web3forms": {
+      "accessKey": ""
+    },
+    "turnstile": {
+      "siteKey": ""
+    },
+    "brevo": {
+      "listId": ""
+    },
+    "vercel": {
+      "projectId": "",
+      "teamId": ""
+    }
+  },
+  "i18n": {
+    "defaultLocale": "en-us",
+    "locales": ["en-us", "fr-fr"]
+  }
+}

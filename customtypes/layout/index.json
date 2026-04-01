@@ -1,0 +1,112 @@
+{
+  "id": "layout",
+  "label": "Site settings",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "site_title": {
+        "type": "Text",
+        "config": {
+          "label": "Site Title",
+          "placeholder": "Bonneval Fine Wines"
+        }
+      },
+      "site_description": {
+        "type": "Text",
+        "config": {
+          "label": "Site Description",
+          "placeholder": "A brief description of the site"
+        }
+      }
+    },
+    "Header": {
+      "header_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Header Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "nav_links": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": "Link label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Footer": {
+      "footer_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Footer Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "footer_links": {
+        "type": "Group",
+        "config": {
+          "label": "Footer Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": "Link label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": "contact@example.com"
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": "+359 ..."
+        }
+      },
+      "address": {
+        "type": "Text",
+        "config": {
+          "label": "Address",
+          "placeholder": "Street, City, Country"
+        }
+      }
+    }
+  }
+}

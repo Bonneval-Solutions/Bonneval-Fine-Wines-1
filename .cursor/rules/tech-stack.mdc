@@ -1,0 +1,18 @@
+---
+description: Tech stack conventions for Bonneval Fine Wines
+alwaysApply: true
+---
+
+# Tech Stack
+
+Next.js 16 App Router + Prismic (Slice Machine) + CSS Modules + Vercel
+
+## Conventions
+
+- Server components by default. Only add `"use client"` when the component needs browser APIs, hooks, or event handlers.
+- All CMS data fetching uses the Prismic client from `@/prismicio`.
+- All content is modeled as slices in Slice Machine. Use Prismic MCP tools for modeling.
+- Design tokens come from `@/lib/master-theme`. Never hardcode colors or font names.
+- Company data comes from `@/lib/company`. Never hardcode addresses, phone numbers, or social links.
+- All pages must have `generateMetadata()` pulling from Prismic SEO fields.
+- i18n: all page routes are nested under `[lang]/`. Use `lang` param when fetching from Prismic.

@@ -1,0 +1,17 @@
+---
+description: Deployment workflow rules for Bonneval Fine Wines
+alwaysApply: false
+---
+
+# Deployment Workflow
+
+Before any push to GitHub or deployment to Vercel:
+
+1. Run `npm run build` locally — must pass with zero errors
+2. Run `npm run lint` — fix errors, review warnings
+3. Verify `.env.local` has no empty required variables
+4. Verify `company-config.json` has no empty required fields
+5. Remove stray `console.log` statements from `src/`
+6. Commit with conventional commit format: `type(scope): description`
+
+Types: feat, fix, style, refactor, docs, chore, perf, test
