@@ -3,7 +3,8 @@ import { asText } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
-import { locales } from "@/i18n";
+import { locales, normalizeLocale } from "@/i18n";
+import { notFound } from "next/navigation";
 
 type Params = { lang: string };
 
@@ -13,9 +14,11 @@ export default async function Home({
   params: Promise<Params>;
 }) {
   const { lang } = await params;
+  const locale = normalizeLocale(lang);
+  if (!locale) notFound();
   const client = createClient();
   const home = await client
-    .getByUID("page", "home", { lang })
+    .getByUID("page", "home", { lang: locale })
     .catch(() => null);
 
   if (!home) {
@@ -39,9 +42,11 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  const locale = normalizeLocale(lang);
+  if (!locale) notFound();
   const client = createClient();
   const home = await client
-    .getByUID("page", "home", { lang })
+    .getByUID("page", "home", { lang: locale })
     .catch(() => null);
 
   if (!home) {

@@ -21,6 +21,18 @@ export function getLocale(request: Request): Locale {
   }
 }
 
-export function isValidLocale(lang: string): lang is Locale {
-  return locales.includes(lang as Locale);
+/**
+ * Maps a path or Prismic lang tag to our canonical locale (always lowercase).
+ * BCP-47 tags often arrive as `fr-FR` while routes and Prismic use `fr-fr`.
+ */
+export function normalizeLocale(tag: string): Locale | null {
+  const lower = tag.toLowerCase();
+  if ((locales as readonly string[]).includes(lower)) {
+    return lower as Locale;
+  }
+  return null;
+}
+
+export function isValidLocale(lang: string): boolean {
+  return normalizeLocale(lang) !== null;
 }

@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { locales, type Locale } from "@/i18n";
-
-function isLocale(value: string): value is Locale {
-  return (locales as readonly string[]).includes(value);
-}
+import { normalizeLocale, type Locale } from "@/i18n";
 
 type LanguageSwitcherProps = {
   lang: string;
@@ -17,12 +13,14 @@ type LanguageSwitcherProps = {
  */
 export function LanguageSwitcher({ lang }: LanguageSwitcherProps) {
   const pathname = usePathname();
-  const current: Locale = isLocale(lang) ? lang : "en-us";
+  const current: Locale = normalizeLocale(lang) ?? "en-us";
   const target: Locale = current === "en-us" ? "fr-fr" : "en-us";
 
   const segments = pathname.split("/").filter(Boolean);
   const first = segments[0];
-  const pathAfterLocale = isLocale(first) ? segments.slice(1) : segments;
+  const pathAfterLocale = normalizeLocale(first)
+    ? segments.slice(1)
+    : segments;
   const suffix =
     pathAfterLocale.length > 0 ? `/${pathAfterLocale.join("/")}` : "";
   const href = `/${target}${suffix}`;

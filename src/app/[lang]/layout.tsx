@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { createClient } from "@/prismicio";
-import { isValidLocale } from "@/i18n";
+import { normalizeLocale } from "@/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -14,19 +14,19 @@ export default async function LocaleLayout({
   params: Promise<LangParams>;
 }) {
   const { lang } = await params;
-
-  if (!isValidLocale(lang)) {
+  const locale = normalizeLocale(lang);
+  if (!locale) {
     notFound();
   }
 
   const client = createClient();
-  const layout = await client.getSingle("layout", { lang }).catch(() => null);
+  const layout = await client.getSingle("layout", { lang: locale }).catch(() => null);
 
   return (
     <>
-      <Header config={layout?.data ?? null} lang={lang} />
+      <Header config={layout?.data ?? null} lang={locale} />
       <main>{children}</main>
-      <Footer config={layout?.data ?? null} lang={lang} />
+      <Footer config={layout?.data ?? null} lang={locale} />
     </>
   );
 }

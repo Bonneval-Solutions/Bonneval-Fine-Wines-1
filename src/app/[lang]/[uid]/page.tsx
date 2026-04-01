@@ -4,6 +4,7 @@ import { asText, filter } from "@prismicio/client";
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+import { normalizeLocale } from "@/i18n";
 
 type Params = { lang: string; uid: string };
 
@@ -13,9 +14,11 @@ export default async function Page({
   params: Promise<Params>;
 }) {
   const { lang, uid } = await params;
+  const locale = normalizeLocale(lang);
+  if (!locale) notFound();
   const client = createClient();
   const page = await client
-    .getByUID("page", uid, { lang })
+    .getByUID("page", uid, { lang: locale })
     .catch(() => notFound());
 
   return <SliceZone slices={page.data.slices} components={components} />;
@@ -27,9 +30,11 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { lang, uid } = await params;
+  const locale = normalizeLocale(lang);
+  if (!locale) notFound();
   const client = createClient();
   const page = await client
-    .getByUID("page", uid, { lang })
+    .getByUID("page", uid, { lang: locale })
     .catch(() => notFound());
 
   return {
@@ -50,8 +55,11 @@ export async function generateStaticParams() {
     })
     .catch(() => []);
 
-  return pages.map((page) => ({
-    lang: page.lang,
-    uid: page.uid,
-  }));
+  return pages.map((page) => {
+    const lang = normalizeLocale(page.lang);
+    return {
+      lang: lang ?? page.lang,
+      uid: page.uid,
+    };
+  });
 }

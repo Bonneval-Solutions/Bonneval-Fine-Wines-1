@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { locales, getLocale } from "./i18n";
+import { getLocale, normalizeLocale } from "./i18n";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -14,21 +14,25 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const pathnameHasLocale = locales.some(
-    (locale) =>
-      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
-  );
+  const segments = pathname.split("/").filter(Boolean);
+  const first = segments[0];
+  const pathLocale = first ? normalizeLocale(first) : null;
 
-  if (pathnameHasLocale) {
-    const locale = pathname.split("/")[1];
+  if (pathLocale) {
+    if (first !== pathLocale) {
+      const rest = segments.slice(1).join("/");
+      const url = request.nextUrl.clone();
+      url.pathname = rest ? `/${pathLocale}/${rest}` : `/${pathLocale}`;
+      return NextResponse.redirect(url, 308);
+    }
     const requestHeaders = new Headers(request.headers);
-    requestHeaders.set("x-locale", locale);
+    requestHeaders.set("x-locale", pathLocale);
     return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
   const locale = getLocale(request);
   const url = request.nextUrl.clone();
-  url.pathname = `/${locale}${pathname}`;
+  url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
 
   return NextResponse.redirect(url);
 }
