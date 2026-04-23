@@ -1,6 +1,5 @@
 /* Brand tokens — Bonneval Fine Wines (see docs/branding-guide) */
 .hero {
-  --bv-burgundy-noir: #2c1018;
   --bv-burgundy-dark: #1f0d14;
   --bv-antique-gold: #c2a355;
   --bv-parchment: #f5f0e8;
@@ -45,7 +44,7 @@
       180deg,
       #452735 0%,
       #341a29 35%,
-      var(--bv-burgundy-noir) 100%
+      var(--bv-noir) 100%
     );
   animation: heroImageIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -194,7 +193,7 @@
 
 .primaryCta {
   background: var(--bv-antique-gold);
-  color: var(--bv-burgundy-noir);
+  color: var(--bv-noir);
   border: 1px solid var(--bv-antique-gold);
 }
 
