@@ -1,0 +1,66 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "headline": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Bonneval Fine Wines"
+            }
+          }
+        ]
+      },
+      "subheadline": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sole importer. Ten domaines. By invitation."
+            }
+          }
+        ]
+      },
+      "primary_cta_label": {
+        "__TYPE__": "FieldContent",
+        "value": "Explore the Domaines"
+      },
+      "primary_cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "#"
+        }
+      },
+      "secondary_cta_label": {
+        "__TYPE__": "FieldContent",
+        "value": "Request Membership"
+      },
+      "secondary_cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "#"
+        }
+      },
+      "background_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2400&q=80",
+          "width": 2400,
+          "height": 1600
+        },
+        "url": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2400&q=80",
+        "width": 2400,
+        "height": 1600,
+        "alt": "Vineyard at dawn"
+      }
+    },
+    "items": []
+  }
+]

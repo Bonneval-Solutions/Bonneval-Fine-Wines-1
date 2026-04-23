@@ -1,0 +1,248 @@
+# Bonneval Fine Wines — Complete brand design brief and wireframe
+
+**Bonneval Fine Wines should position itself as the TWG Tea of Burgundy** — a brand built from scratch that feels like it has existed for centuries, operating at the intersection of French wine culture, Bulgarian provenance, and investment-grade exclusivity. The research across 15+ luxury benchmarks reveals a clear playbook: restrained visual elegance, heritage suggestion through adjacent history, allocation-driven scarcity, and WhatsApp-first concierge communication. What follows is the full strategic and design framework.
+
+---
+
+## The competitive landscape Bonneval enters
+
+The fine wine merchant space in 2025–26 breaks into three tiers. At the top sit heritage institutions: **Berry Bros & Rudd** (est. 1698) with its Royal Warrant, Pentagram-designed identity, and BBX trading platform; **Corney & Barrow** (est. 1780), sole UK agent for DRC, Petrus, and Leflaive, with **75% of its portfolio exclusive**; and **Justerini & Brooks** (est. 1749), the largest domaine-bottled Burgundy importer with 55+ domaines. These merchants win on centuries of relationships and institutional gravitas.
+
+The middle tier includes specialist boutiques like **Ripley Wines** (importing since 1983, transparent about how allocations work), **Flint Wines** (which absorbed Domaine Direct's 80+ producer relationships), **Goedhuis Waddesdon** (three-time IWC Burgundy Specialist winner), and **Haynes Hanson & Clark** (founded by Anthony Hanson MW). These win on deep personal relationships and curated access.
+
+The investment-trading tier — **Liv-ex**, **Bordeaux Index**, **Cult Wines** — positions wine as a financial asset with Bloomberg-integrated indices and portfolio dashboards. Their visual language borrows from fintech: dark navy palettes, SVG data visualizations, and B2B SaaS patterns.
+
+**Bonneval occupies white space in this landscape.** No merchant currently combines sole Burgundy import into Bulgaria, WhatsApp-first private dealing, and a luxury brand identity built from zero with TWG-level aspiration. The nearest parallel is the **Burgundy Wine Club** (Manchester), which uses WhatsApp and exclusivity language but lacks the visual sophistication and heritage framing Bonneval needs.
+
+---
+
+## TWG Tea — the blueprint for building luxury from nothing
+
+TWG Tea is the single most instructive benchmark. Founded in Singapore in 2007–08 with $10M, it broke even by 2012 and now generates **$90M+ in annual revenue** across 70+ boutiques in 23+ countries. The lessons are directly transferable:
+
+**Heritage suggestion, not fabrication.** TWG's logo prominently displays "1837" — not the founding year, but when Singapore became a tea trading post. A Hong Kong judge noted this "led people to believe the company was established at that time." TWG never lies; it says it "celebrates the year 1837." Bonneval can anchor to Burgundy's deep timeline — the Cistercian monks who first mapped terroir in the 12th century, the Appellation d'Origine Contrôlée system established in 1936, or a specific year linked to the domaines it represents.
+
+**Commodity-to-luxury elevation through packaging and ritual.** TWG sells tea at $40/100g by treating every tin as a collectible art object — seasonal designs, gold embossing, hand-sewn cotton tea bags. For Bonneval, the equivalent is treating every allocation offer as a curated event: printed brochures on heavy stock, embossed stationery, and presentation that makes a 6-bottle Burgundy case feel like receiving an artwork.
+
+**Fashion-industry vocabulary.** TWG calls its teas "Haute Couture" collections and releases seasonal blends like runway drops. Bonneval should adopt similar language: "cuvée selections," "vintage campaigns," and "collection releases" that frame wine purchasing as a cultural moment, not a transaction.
+
+**Never discount, never advertise.** TWG launched during the 2008 financial crisis and refused promotions while competitors slashed prices. Word-of-mouth, packaging-as-marketing, and placement in prestige contexts (Singapore Airlines first class, 5-star hotels) built the brand. Bonneval should follow the same discipline: no discounts, no mass advertising, no presence on generic wine marketplaces.
+
+---
+
+## Brand positioning statement
+
+> **Bonneval Fine Wines** is Sofia's sole gateway to ten of Burgundy's most revered domaines. Born from French roots and built on direct relationships with the vignerons themselves, Bonneval offers its private members privileged access to wines that never reach the open market — allocated by trust, delivered with the quiet authority of a century-old négociant, and presented with the precision of a maison de luxe. We do not sell wine. We extend invitations.
+
+---
+
+## Color palette — French elegance meets Bulgarian terroir
+
+The palette draws from three sources: the deep earth tones of Burgundy's Côte d'Or, the gold-and-cream elegance of French luxury (informed by TWG's signature gold), and a distinctive accent that nods to Bulgaria without being literal. The goal: **luxury without being stuffy, warmth without being casual**.
+
+| Role | Color | Hex | Reference |
+|------|-------|-----|-----------|
+| **Primary — Burgundy Noir** | Deep, nearly-black burgundy | `#2C1018` | The color of aged Pinot Noir; evokes Corney & Barrow's dark restrained palette |
+| **Secondary — Antique Gold** | Warm heritage gold | `#C2A355` | TWG's signature gold, the gold foil on C&B's Own Label packaging |
+| **Tertiary — Parchment** | Warm off-white/cream | `#F5F0E8` | Berry Bros' gallery-white backgrounds, TWG's cream tones |
+| **Accent — Limestone** | Warm grey with violet undertone | `#8B8590` | The Burgundy limestone (calcaire) that defines terroir; subtle Bulgarian rose nod |
+| **Text — Encre** | Rich near-black | `#1A1A1A` | Softer than pure black; used for all body copy |
+| **Highlight — Domaine Vert** | Muted sage green | `#6B7D6B` | Vineyard foliage; used sparingly for "available" states and subtle accents |
+
+**Usage rules:** Burgundy Noir and Parchment dominate (80% of any given page). Antique Gold appears only in the logo, key headlines, dividers, and hover states — like TWG, gold is the thread that runs through everything but never overwhelms. Limestone serves for secondary text and UI elements. Domaine Vert is reserved for functional signals (availability badges, confirmation states).
+
+---
+
+## Typography direction — ceremony meets clarity
+
+The type system pairs a display serif with an architectural sans-serif, following the BBR model (heritage in the serif, modernity in the sans) and TWG's approach (classical serif logo, clean sans body text).
+
+**Display / Headings:** A high-contrast modern serif like **Cormorant Garamond** or **Playfair Display** — elegant, French in feel, with visible thick-thin stroke contrast that evokes engraved letterpress. Used for H1 headlines, the logo wordmark, and pull quotes. Generous letter-spacing (tracking +20–40) at display sizes to create breathing room.
+
+**Body / UI:** A refined sans-serif like **Inter**, **Söhne**, or **Avenir** — clean, geometric, contemporary. Used for all body copy, navigation, buttons, and functional text. Weight variations (Light for large text, Regular for body, Medium for emphasis) create hierarchy without needing additional typefaces.
+
+**Monospaced accent (optional):** For price displays, vintage years, and technical wine data, a monospaced typeface like **JetBrains Mono** or **IBM Plex Mono** at small sizes adds a subtle investment-platform feel — borrowing from Liv-ex's financial authority without going full fintech.
+
+**Type hierarchy principles:**
+- Headlines in the serif, always in sentence case (never all-caps), **always generous whitespace** around them
+- Body text at 16–18px minimum, short paragraphs, maximum 65 characters per line
+- Gold color reserved for the logo wordmark and critical accent text only
+- Wine names always in the serif typeface, even within body text — treating each domaine name as a proper title
+
+---
+
+## Tone of voice — five governing principles
+
+**1. Quiet authority.** We know more than we say. Like Corney & Barrow's "75% of our portfolio is exclusive to us" — stated as fact, not boast. No superlatives, no exclamation marks, no "world's best" claims. The knowledge is implicit.
+
+**2. Invitation, not persuasion.** Every piece of communication reads as an invitation extended, not a product pushed. "Your allocation is ready" rather than "Buy now." "We've set aside" rather than "Limited stock." Following the Hermès model: opacity creates desire.
+
+**3. Terroir-first storytelling.** Domaines and vineyards are the protagonists, never Bonneval itself. Wine descriptions lead with place and soil, not flavour notes. "From the steep limestone slopes above Vosne-Romanée, where Arnaud tends vines planted by his grandfather in 1953…" — the story of the wine is the story of the land and the family.
+
+**4. Warmth without familiarity.** The voice is personal but never casual. Second person ("your cellar," "your allocation") creates intimacy. First person plural ("we've tasted," "our annual visit") creates community. But no slang, no abbreviations, no forced informality. Think: a knowledgeable sommelier at a Michelin-starred restaurant — friendly, attentive, never presumptuous.
+
+**5. Bilingual elegance.** French terms are used where they are more precise or evocative than English equivalents: *terroir*, *négociant*, *cuvée*, *mise en bouteille*, *climat*. But never gratuitously — only where the French word carries meaning the English does not. This signals insider knowledge and honours the domaines.
+
+---
+
+## Section-by-section wireframe brief
+
+### Homepage
+
+**Purpose:** Create immediate emotional impact, establish luxury positioning, and channel visitors to either the shop (browsers) or the members area (existing/qualified clients).
+
+**Section 1 — Hero (full viewport height)**
+A single full-bleed photograph: a close-up of hands in a Burgundy cellar, chalk markings on a barrel, or morning mist over the Côte d'Or. Not a bottle shot — a *place* shot. Overlaid in Antique Gold serif: the Bonneval wordmark and a single line: *"Sole importer. Ten domaines. By invitation."* Below, two CTAs in the sans-serif: "Explore the Domaines" and "Request Membership." No navigation visible until scroll (the nav fades in at scroll, following Aman Resorts' immersive model).
+
+**Section 2 — The proposition (3 cards)**
+Three equal columns on Parchment background, each with a small gold icon (vine tendril, wax seal, key) and a single sentence: *"Ten of Burgundy's most revered domaines, imported exclusively to Bulgaria"* / *"Private allocations delivered to members via WhatsApp and email"* / *"From the cellar to your collection — provenance guaranteed."*
+
+**Section 3 — Featured wine (editorial)**
+A large-format image (60% width) of a single bottle on a limestone surface, paired with a text block: the domaine name in display serif, the appellation, and 3–4 sentences of terroir storytelling. Below: "Available to members" with a "Request access" link. This section rotates seasonally, mirroring TWG's seasonal collection model.
+
+**Section 4 — The Domaines (scrolling grid)**
+Ten producer cards in a 2×5 or scrollable horizontal layout. Each card: domaine name in serif, a single vineyard photograph (not the winemaker — the *land*), the appellation, and a one-line descriptor. On hover, a subtle gold border appears. Clicking leads to the full domaine page. Header above: *"The ten houses of Bonneval."*
+
+**Section 5 — Private Members Club teaser**
+Dark section (Burgundy Noir background, Parchment text, Gold accents). A short paragraph explaining the club concept: WhatsApp-delivered offers, allocation-based purchasing, private tastings in Sofia. One CTA: "Apply for membership." This section should feel like a velvet rope — exclusive but inviting.
+
+**Section 6 — Heritage footer**
+A brief origin line: *"Formerly Bon Château, Loire Valley. Now Sofia. Always Burgundy."* — followed by standard footer links, the Bonneval wordmark, and social icons. The footer should be minimal and elegant: no clutter, no excessive link lists.
+
+### Shop / Wine catalogue
+
+**Purpose:** Present available wines with investment-grade clarity and collector-friendly functionality, while maintaining the editorial luxury aesthetic.
+
+**Top bar:** Toggle between "Duty Paid" and "In Bond" pricing (following BBR and Corney & Barrow's convention, essential for collectors). Currency selector: BGN / EUR / GBP.
+
+**Filtering sidebar (left, collapsible on mobile):**
+- By domaine (10 producers)
+- By appellation (Gevrey-Chambertin, Vosne-Romanée, Meursault, etc.)
+- By colour (Rouge / Blanc)
+- By vintage
+- By price range
+- By availability: "Available now" / "Allocation only" / "Pre-arrival"
+
+**Wine listing cards:** Each card shows a bottle photograph on a neutral limestone-textured background (following BBR's marble staging approach), the domaine name in serif, the wine name, appellation, vintage, and price. An "Allocation only" badge in muted gold for restricted wines. No star ratings, no critic scores on the listing page — this is not a retail shop, it's a curated collection.
+
+**Individual wine page:**
+- Large bottle photograph (left 40%)
+- Wine details (right 60%): Domaine name (linked to domaine page), full wine name, appellation, vintage, price (duty paid and in bond), availability status
+- *"About this wine"* — 2–3 paragraphs of terroir-first storytelling, not conventional tasting notes. Where is the vineyard? What is the soil? How old are the vines? What was the vintage character?
+- *"The domaine"* — brief paragraph with link to full domaine page
+- *"Technical"* — collapsible section: grape variety, ageing, production volume, alcohol
+- CTA: "Add to cellar" (for available wines) or "Request allocation" (for restricted wines — this triggers a WhatsApp/email inquiry)
+- "You may also enjoy" — 3 related wines from the same domaine or appellation
+
+### Private Members Club
+
+**Purpose:** Explain the membership model, convey exclusivity, and provide a frictionless application process that nonetheless signals selectivity.
+
+**Section 1 — Statement of intent**
+Full-width dark section. Serif headline: *"Not a shop. A private allocation."* Paragraph explaining the model: Bonneval operates as a private members club. Members receive allocated wines from ten exclusive Burgundy domaines via WhatsApp and email. Wines are offered on a first-come, first-served basis within the membership. There is no public retail — only members purchase.
+
+**Section 2 — How it works (4 steps)**
+Four numbered steps, each with a gold numeral and sans-serif description:
+1. *Apply* — Submit an expression of interest. Tell us about your collection and what you seek.
+2. *Welcome* — Accepted members receive a welcome package and WhatsApp invitation.
+3. *Receive offers* — 2–4 times monthly, new allocations arrive via WhatsApp and email with full tasting context.
+4. *Build your cellar* — Purchase, store (bonded options available), or drink. Your collection grows with each vintage.
+
+**Section 3 — Membership tiers (2 tiers maximum)**
+Following the Screaming Eagle model of simplicity (not the Soho House model of complexity):
+
+- **Membre** — Access to all standard allocations. WhatsApp group access. Invitations to Sofia tastings. Annual spend commitment of €2,000+.
+- **Cercle Intérieur** — Priority access to grand cru and micro-allocation wines. Winemaker dinner invitations. Personal cellar advisory. Annual Burgundy visit invitation. By invitation only based on engagement and purchase history.
+
+Keep tier descriptions brief and aspirational. Do not list exhaustive benefits — **opacity is a feature**. Following the Hermès principle: not knowing exactly what you get makes every interaction feel earned.
+
+**Section 4 — Application form**
+Minimal, elegant form: Name, email, phone (with WhatsApp indicator), city, brief description of wine interests/collection, how you heard about Bonneval. No invasive questions. The form should feel like writing a note, not filling out an application. Submit button: *"Request an invitation."*
+
+### About / The Domaines
+
+**Purpose:** Establish Bonneval's authority, tell the origin story, and present each domaine as a protagonist.
+
+**Section 1 — The Bonneval story**
+Origin narrative told in the TWG style — not a corporate "about us" but a personal story of passion and discovery. Key beats: French roots in the Loire Valley (Bon Château), the move to Sofia, the first visit to a Burgundy cellar that changed everything, the decision to build direct relationships with ten specific domaines, the commitment to bringing these wines exclusively to Bulgaria and its collectors. The narrative should suggest depth and history without overstating. A single archival-style photograph (founder in a cellar, or a vineyard landscape) accompanies the text.
+
+**Section 2 — Why Bulgaria? Why Sofia?**
+A brief, confident section that addresses the unexpected geography head-on. Sofia as a growing European capital with a sophisticated collector community. Bulgaria's own winemaking heritage (Thracian roots, 5,000+ years). The advantage of being outside the crowded London/New York merchant scene: direct relationships, personal service, undivided attention from the domaines.
+
+**Section 3 — The ten domaines (individual pages)**
+Each domaine gets a dedicated page, structured as follows:
+- Hero image: the vineyard or cellar (landscape, not portrait — the land is the hero)
+- Domaine name in display serif, appellation, and a one-line positioning statement
+- *"The place"* — terroir description: soil, aspect, altitude, climate
+- *"The family"* — generational story of the vignerons. How many generations? What is their philosophy?
+- *"Our relationship"* — how Bonneval connected with this domaine. What trust was built and how.
+- *"The wines"* — list of available cuvées with links to the shop
+- A pull quote from the vigneron (in French with English translation) adds authenticity
+
+This section follows the Corney & Barrow model of producer-as-hero storytelling, combined with TWG's "About Tea Collection" narrative depth.
+
+### Contact / Enquire
+
+**Purpose:** Convert interest into relationship. Every interaction begins here.
+
+**Design:** Clean, minimal. No contact form longer than 5 fields. The page communicates that personal contact is preferred — this is not a helpdesk, it's the beginning of a relationship.
+
+**Elements:**
+- A brief line: *"We prefer conversation to correspondence. Reach us directly."*
+- WhatsApp link (prominently displayed, with the WhatsApp icon in Antique Gold)
+- Email: a single elegant address (e.g., cave@bonnevalwines.com)
+- Phone number with Sofia dialling code
+- Physical address in Sofia (even if it's a registered office — having a named location builds trust)
+- For trade/press enquiries: a separate email
+- No map embed, no social media grid — keep it minimal
+
+---
+
+## Key differentiators versus the competition
+
+**1. Geographic white space.** No luxury Burgundy-specialist merchant operates from Sofia or targets the Bulgarian collector market. London has dozens; Sofia has zero. Bonneval owns this territory entirely.
+
+**2. WhatsApp-native commerce.** While the Burgundy Wine Club mentions WhatsApp as a contact method, no established merchant has built its entire commercial model around WhatsApp-delivered allocations. This mirrors the **Threads Styling** model (a luxury fashion business with 75% annual growth built entirely on WhatsApp/WeChat, no website, no store) — adapted for fine wine.
+
+**3. Sole importer with a defined portfolio.** Corney & Barrow claims 75% exclusivity across hundreds of producers. Bonneval inverts this: **100% exclusivity across exactly ten domaines**. The constraint is the message. Ten is memorable, curated, finite — like a capsule collection. It communicates taste rather than breadth.
+
+**4. TWG-grade brand identity for a wine merchant.** No Burgundy merchant currently invests in the level of visual and experiential branding that TWG brought to tea. Most merchant websites range from functional e-commerce (Corney & Barrow on Magento) to elegant editorial (BBR). Bonneval can leapfrog by treating every touchpoint — website, allocation emails, WhatsApp messages, packaging, printed materials — with the consistency and craft of a luxury maison.
+
+**5. Dual audience architecture.** Bonneval explicitly serves two audiences — Bulgarian local collectors and international Burgundy collectors — and can tailor communication accordingly. Bulgarian-language WhatsApp group alongside English-language international outreach. This bilingual model is unique among specialist merchants.
+
+**6. French roots, Bulgarian base.** The "Bon Château to Bonneval" origin story — Loire Valley heritage transplanted to Sofia — gives the brand a genuine narrative arc that most merchants (who have simply always been in London) cannot match. It is an *earned* story, not a fabricated one.
+
+---
+
+## Private Members Club mechanics — the recommended model
+
+Drawing from Screaming Eagle's allocation discipline, Hermès' relationship-based access, TWG's never-discount philosophy, 67 Pall Mall's wine-first club model, and Threads Styling's WhatsApp commerce.
+
+**Application and vetting.** All membership begins with a brief application (the web form or a direct WhatsApp message). The founder personally reviews and responds. No automated acceptance. Even if acceptance is near-universal initially (to build the base), the *process* of application signals selectivity. Following the Soho House insight: "The waiting list is real — or presented as real, which amounts to the same effect."
+
+**Welcome ritual.** Accepted members receive a physical welcome package: a printed card on heavy stock with the Bonneval crest, a brief guide to the ten domaines, and a personal note from the founder. This follows the art-gallery model where the physical invitation signals genuine investment in the relationship. The WhatsApp group invitation follows.
+
+**Communication cadence.** Two to four WhatsApp messages per month, each presenting a specific allocation: the wine, its story, the price, and the quantity available. Messages are crafted with the same editorial care as the website copy — terroir-first storytelling, not "flash sale" language. Sample format:
+
+> *Domaine [Name] — [Appellation] 2022*
+> *From the east-facing slopes of [climat], where Michel's 60-year-old vines root deep into Bathonian limestone. Only 2,400 bottles produced. We have 36 for our members.*
+> *€[price] per bottle / €[price] per case of 6*
+> *Reply to reserve. Available until Friday.*
+
+Monthly email newsletter supplements WhatsApp with longer-form content: vintage reports, domaine visit journals, tasting notes, upcoming events. This email is editorial, not transactional — modeled on BBR's content strategy and TWG's "World of TWG" storytelling.
+
+**Allocation mechanics.** Wines are offered first-come, first-served within the membership. For highly limited allocations (grand cru, micro-production), Cercle Intérieur members receive a 24-hour priority window before general membership. Following the DRC bundled-purchasing principle: members who consistently purchase across the full portfolio (not just the trophy wines) receive priority for the most allocated bottles. This rewards engagement over pure spend.
+
+**Pricing philosophy.** All wines priced transparently in bond and duty paid. No "price upon request" for standard allocations — transparency builds trust. However, for occasional rare back-vintage or large-format offerings, "Enquire" replaces the price — creating the ultra-luxury signal of personal interaction for the highest tier.
+
+**Events.** Quarterly tastings in Sofia (private venue, not a commercial space). Annual winemaker dinner (one domaine's vigneron visits Sofia). For Cercle Intérieur: annual Burgundy trip (small group, hosted cellar visits across the ten domaines). These physical touchpoints are essential — **the most effective luxury members programs combine digital convenience with physical ceremony**.
+
+**Retention.** Following Screaming Eagle's model: members who do not purchase for two consecutive allocation cycles are gently moved to a "resting" status and eventually removed. The list must remain active and engaged. This is communicated upfront: *"Membership is maintained through participation. We keep our circle small and our allocations meaningful."*
+
+---
+
+## Summary of design and brand recommendations
+
+The Bonneval identity should feel like **the quiet confidence of Berry Bros & Rudd, the exclusive access of Corney & Barrow, the heritage suggestion of TWG Tea, and the gallery-not-store aesthetic of the art world** — all distilled into a brand that is unmistakably its own. Every touchpoint whispers rather than shouts. The constraint of ten domaines is the brand's greatest asset: it forces focus, enables depth, and communicates a curatorial eye that broader merchants cannot match.
+
+The website should load slowly and beautifully, like entering a cellar. The WhatsApp messages should read like personal notes from a trusted advisor. The printed materials should feel like something worth keeping. And the wines themselves — presented with the reverence of artworks, the precision of investment instruments, and the warmth of something shared between friends — should make every member feel they have been invited into a world most people will never see.

@@ -27,7 +27,17 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} className={`${cormorant.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body
+        style={{
+          margin: 0,
+          minHeight: "100vh",
+          backgroundColor: "#f7f4ef",
+          backgroundImage: "url(/paper-tile.webp)",
+          backgroundRepeat: "repeat",
+        }}
+      >
+        {children}
+      </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
   );

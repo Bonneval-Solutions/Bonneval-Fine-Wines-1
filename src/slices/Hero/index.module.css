@@ -1,0 +1,257 @@
+/* Brand tokens — Bonneval Fine Wines (see docs/branding-guide) */
+.hero {
+  --bv-burgundy-noir: #2c1018;
+  --bv-antique-gold: #c2a355;
+  --bv-parchment: #f5f0e8;
+  --bv-encre: #1a1a1a;
+  --bv-limestone: #8b8590;
+  --bv-domaine-vert: #6b7d6b;
+  --bv-radius: 0.25rem;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-height: calc(100svh - var(--site-header-offset, 5rem));
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  padding-left: clamp(1.5rem, 5vw, 4rem);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  animation: heroImageIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.heroBg img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroBgPlaceholder {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      145deg,
+      var(--bv-burgundy-noir) 0%,
+      #3a1522 45%,
+      #1a0a10 100%
+    );
+  animation: heroImageIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(44, 16, 24, 0.88) 0%,
+      rgba(44, 16, 24, 0.55) 38%,
+      rgba(44, 16, 24, 0.22) 68%,
+      rgba(44, 16, 24, 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(44, 16, 24, 0.15) 0%,
+      rgba(44, 16, 24, 0.45) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  width: 100%;
+  max-width: min(36rem, 100%);
+  margin-left: auto;
+  text-align: right;
+  color: var(--bv-parchment);
+}
+
+.headline {
+  animation: headlineFromRight 1s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
+}
+
+.headline :global(h1) {
+  margin: 0;
+  font-family: var(--font-heading), "Cormorant Garamond", serif;
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 0.06em;
+  color: var(--bv-antique-gold);
+  text-wrap: balance;
+}
+
+.headline :global(h1 span),
+.wordmarkLine {
+  display: block;
+}
+
+.wordmarkLine + .wordmarkLine {
+  margin-top: 0.12em;
+}
+
+.subheadline {
+  margin-top: clamp(1rem, 2.2vw, 1.75rem);
+  max-width: 42ch;
+  margin-left: auto;
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both;
+}
+
+.subheadline :global(p) {
+  margin: 0;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-size: clamp(0.95rem, 1.35vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: rgba(245, 240, 232, 0.92);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: clamp(1.35rem, 2.5vw, 2rem);
+  animation: fadeUpSoft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--bv-radius);
+  text-decoration: none;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.primaryCta {
+  background: var(--bv-antique-gold);
+  color: var(--bv-burgundy-noir);
+  border: 1px solid transparent;
+}
+
+.primaryCta:hover {
+  transform: translateY(-1px);
+  background: #d4b56a;
+}
+
+.secondaryCta {
+  background: transparent;
+  color: var(--bv-parchment);
+  border: 1px solid rgba(194, 163, 85, 0.55);
+}
+
+.secondaryCta:hover {
+  transform: translateY(-1px);
+  border-color: var(--bv-antique-gold);
+  color: var(--bv-antique-gold);
+}
+
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: translateY(7%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes headlineFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(2.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(0.85rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: calc(100svh - var(--site-header-offset, 5rem));
+    max-height: none;
+    align-items: flex-end;
+    padding: 1.25rem;
+    padding-bottom: clamp(2rem, 8vh, 3rem);
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(44, 16, 24, 0.25) 0%,
+        rgba(44, 16, 24, 0.82) 55%,
+        rgba(44, 16, 24, 0.94) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(44, 16, 24, 0.35) 0%,
+        rgba(44, 16, 24, 0.35) 100%
+      );
+  }
+
+  .heroContent {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .subheadline {
+    margin-left: 0;
+  }
+
+  .ctas {
+    justify-content: flex-start;
+  }
+
+  .headline {
+    animation-name: headlineFromRight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBg,
+  .heroBgPlaceholder,
+  .headline,
+  .subheadline,
+  .ctas {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
