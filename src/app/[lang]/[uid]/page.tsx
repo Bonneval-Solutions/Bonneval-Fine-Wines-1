@@ -7,6 +7,12 @@ import { components } from "@/slices";
 import { normalizeLocale } from "@/i18n";
 
 type Params = { lang: string; uid: string };
+const domainesGridFetchLinks = [
+  "domaine.name",
+  "domaine.appellation",
+  "domaine.descriptor",
+  "domaine.hero_image",
+];
 
 export default async function Page({
   params,
@@ -18,7 +24,7 @@ export default async function Page({
   if (!locale) notFound();
   const client = createClient();
   const page = await client
-    .getByUID("page", uid, { lang: locale })
+    .getByUID("page", uid, { lang: locale, fetchLinks: domainesGridFetchLinks })
     .catch(() => notFound());
 
   return <SliceZone slices={page.data.slices} components={components} />;
@@ -34,7 +40,7 @@ export async function generateMetadata({
   if (!locale) notFound();
   const client = createClient();
   const page = await client
-    .getByUID("page", uid, { lang: locale })
+    .getByUID("page", uid, { lang: locale, fetchLinks: domainesGridFetchLinks })
     .catch(() => notFound());
 
   return {

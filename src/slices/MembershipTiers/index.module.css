@@ -1,0 +1,178 @@
+.section {
+  background: var(--bv-encre);
+  padding: var(--section-padding);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--bv-gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.7;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 400;
+  color: var(--bv-parchment);
+  margin-bottom: 18px;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 44px 40px;
+}
+
+.cardDefault {
+  background: transparent;
+  border: 1px solid rgba(245, 240, 232, 0.08);
+}
+
+.cardFeatured {
+  background: var(--bv-noir);
+  border: 1px solid var(--bv-gold);
+}
+
+.subLabel {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--bv-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.65;
+}
+
+.tierName {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--bv-parchment);
+  margin-bottom: 6px;
+}
+
+.priceLine {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--bv-gold);
+  margin-bottom: 28px;
+  opacity: 0.75;
+}
+
+.cardDivider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin-bottom: 24px;
+}
+
+.benefits {
+  margin-bottom: 36px;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.benefitDash {
+  color: var(--bv-gold);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefitText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--bv-parchment);
+  opacity: 0.65;
+}
+
+.benefitText :global(li) {
+  margin: 0;
+}
+
+.cta {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 13px;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition-fast);
+}
+
+.ctaDefault {
+  background: transparent;
+  border: 1px solid rgba(245, 240, 232, 0.22);
+  color: var(--bv-parchment);
+  font-weight: 400;
+}
+
+.ctaFeatured {
+  background: var(--bv-gold);
+  border: 1px solid var(--bv-gold);
+  color: var(--bv-noir);
+  font-weight: 500;
+}
+
+.ctaFeatured:hover {
+  background: #d4b56a;
+}
+
+.ctaDefault:hover {
+  border-color: rgba(245, 240, 232, 0.4);
+}
+
+.footnote {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--bv-parchment);
+  opacity: 0.28;
+  margin-top: 28px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .headline {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 32px 24px;
+  }
+}

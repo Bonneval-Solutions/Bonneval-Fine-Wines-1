@@ -32,6 +32,48 @@
             },
             "rich_text": {
               "type": "SharedSlice"
+            },
+            "three_column_features": {
+              "type": "SharedSlice"
+            },
+            "featured_wine": {
+              "type": "SharedSlice"
+            },
+            "domaines_grid": {
+              "type": "SharedSlice"
+            },
+            "members_teaser": {
+              "type": "SharedSlice"
+            },
+            "members_hero": {
+              "type": "SharedSlice"
+            },
+            "how_it_works": {
+              "type": "SharedSlice"
+            },
+            "membership_tiers": {
+              "type": "SharedSlice"
+            },
+            "whats_app_preview": {
+              "type": "SharedSlice"
+            },
+            "application_form": {
+              "type": "SharedSlice"
+            },
+            "origin_story": {
+              "type": "SharedSlice"
+            },
+            "geography": {
+              "type": "SharedSlice"
+            },
+            "domaines_list": {
+              "type": "SharedSlice"
+            },
+            "contact_blocks": {
+              "type": "SharedSlice"
+            },
+            "bottom_contact_cta": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,0 +1,78 @@
+{
+  "id": "domaines_list",
+  "type": "SharedSlice",
+  "name": "DomainesList",
+  "description": "2x5 card grid with image and domaine details",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Two-column domaine cards with image left, details right",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "The portfolio"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "The ten houses of Bonneval"
+          }
+        }
+      },
+      "items": {
+        "domaine": {
+          "type": "Link",
+          "config": {
+            "label": "Domaine",
+            "select": "document",
+            "customtypes": ["domaine"]
+          }
+        },
+        "card_image": {
+          "type": "Image",
+          "config": {
+            "label": "Card Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": "Domaine Leroy"
+          }
+        },
+        "appellation": {
+          "type": "Text",
+          "config": {
+            "label": "Appellation",
+            "placeholder": "Vosne-Romanée"
+          }
+        },
+        "color": {
+          "type": "Select",
+          "config": {
+            "label": "Colour",
+            "options": ["rouge", "blanc"]
+          }
+        },
+        "descriptor": {
+          "type": "Text",
+          "config": {
+            "label": "Descriptor",
+            "placeholder": "Short description"
+          }
+        }
+      },
+      "imageUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "domaine",
+  "label": "Domaine",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": "domaine-leroy"
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Domaine Name",
+          "placeholder": "Domaine Leroy"
+        }
+      },
+      "appellation": {
+        "type": "Text",
+        "config": {
+          "label": "Appellation",
+          "placeholder": "Vosne-Romanée"
+        }
+      },
+      "color": {
+        "type": "Select",
+        "config": {
+          "label": "Colour",
+          "placeholder": "Wine colour",
+          "options": ["rouge", "blanc"]
+        }
+      },
+      "descriptor": {
+        "type": "Text",
+        "config": {
+          "label": "Short Descriptor",
+          "placeholder": "One-line description for grid cards"
+        }
+      },
+      "hero_image": {
+        "type": "Image",
+        "config": {
+          "label": "Hero Image",
+          "constraint": {},
+          "thumbnails": [
+            {
+              "name": "card",
+              "width": 600,
+              "height": 400
+            }
+          ]
+        }
+      },
+      "the_place": {
+        "type": "StructuredText",
+        "config": {
+          "label": "The Place",
+          "placeholder": "Terroir description — soil, aspect, altitude",
+          "allowTargetBlank": false,
+          "multi": "paragraph"
+        }
+      },
+      "the_family": {
+        "type": "StructuredText",
+        "config": {
+          "label": "The Family",
+          "placeholder": "Generational story, philosophy",
+          "allowTargetBlank": false,
+          "multi": "paragraph"
+        }
+      },
+      "our_relationship": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Our Relationship",
+          "placeholder": "How Bonneval connected with this domaine",
+          "allowTargetBlank": false,
+          "multi": "paragraph"
+        }
+      },
+      "pull_quote_fr": {
+        "type": "Text",
+        "config": {
+          "label": "Pull Quote (French)",
+          "placeholder": "« Le terroir ne ment jamais… »"
+        }
+      },
+      "pull_quote_en": {
+        "type": "Text",
+        "config": {
+          "label": "Pull Quote (English)",
+          "placeholder": "\"The terroir never lies…\""
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Domaine Name — Bonneval Fine Wines"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of this domaine"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "membership_tiers",
+  "type": "SharedSlice",
+  "name": "MembershipTiers",
+  "description": "Two-column tier comparison on dark background",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Membership tier cards with benefits list",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "Membership"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "Two tiers, one circle"
+          }
+        },
+        "footnote": {
+          "type": "Text",
+          "config": {
+            "label": "Footnote",
+            "placeholder": "Membership is maintained through participation."
+          }
+        }
+      },
+      "items": {
+        "tier_name": {
+          "type": "Text",
+          "config": {
+            "label": "Tier Name",
+            "placeholder": "Membre"
+          }
+        },
+        "sub_label": {
+          "type": "Text",
+          "config": {
+            "label": "Sub Label",
+            "placeholder": "Standard membership"
+          }
+        },
+        "price_line": {
+          "type": "Text",
+          "config": {
+            "label": "Price Line",
+            "placeholder": "From €2,000 annually"
+          }
+        },
+        "benefits": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Benefits",
+            "placeholder": "One benefit per line",
+            "allowTargetBlank": false,
+            "multi": "list-item"
+          }
+        },
+        "is_featured": {
+          "type": "Boolean",
+          "config": {
+            "label": "Featured (highlighted)",
+            "default_value": false
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label",
+            "placeholder": "Apply for membership"
+          }
+        }
+      },
+      "imageUrl": ""
+    }
+  ]
+}

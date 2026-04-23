@@ -1,0 +1,35 @@
+{
+  "id": "three_column_features",
+  "type": "SharedSlice",
+  "name": "ThreeColumnFeatures",
+  "description": "3-card grid with icon glyph and body text on parchment",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Three feature cards with icon and description",
+      "primary": {},
+      "items": {
+        "icon_glyph": {
+          "type": "Text",
+          "config": {
+            "label": "Icon Glyph",
+            "placeholder": "◈"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "Feature description",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          }
+        }
+      },
+      "imageUrl": ""
+    }
+  ]
+}

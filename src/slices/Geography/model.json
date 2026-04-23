@@ -1,0 +1,65 @@
+{
+  "id": "geography",
+  "type": "SharedSlice",
+  "name": "Geography",
+  "description": "Two-column on dark background for geography and advantage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Two columns: Why Bulgaria left, Outside the crowd right",
+      "primary": {
+        "col_left_label": {
+          "type": "Text",
+          "config": {
+            "label": "Left Column Label",
+            "placeholder": "Geography"
+          }
+        },
+        "col_left_head": {
+          "type": "Text",
+          "config": {
+            "label": "Left Column Headline",
+            "placeholder": "Why Bulgaria? Why Sofia?"
+          }
+        },
+        "col_left_body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Left Column Body",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        },
+        "col_right_label": {
+          "type": "Text",
+          "config": {
+            "label": "Right Column Label",
+            "placeholder": "The advantage"
+          }
+        },
+        "col_right_head": {
+          "type": "Text",
+          "config": {
+            "label": "Right Column Headline",
+            "placeholder": "Outside the crowd"
+          }
+        },
+        "col_right_body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Right Column Body",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": ""
+    }
+  ]
+}

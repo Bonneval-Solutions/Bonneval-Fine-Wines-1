@@ -33,6 +33,10 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     Boolean(slice.primary.secondary_cta_label) &&
     isFilled.link(slice.primary.secondary_cta_link);
   const hasAnyCta = hasPrimaryCta || hasSecondaryCta;
+  const location = [company.address.city, company.address.country]
+    .filter(Boolean)
+    .join(" · ")
+    .toUpperCase();
 
   return (
     <section className={styles.hero}>
@@ -52,6 +56,8 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className={styles.overlay} aria-hidden />
 
       <div className={styles.heroContent}>
+        {location ? <p className={styles.location}>{location}</p> : null}
+
         <div className={styles.headline}>
           {hasHeadline ? (
             <PrismicRichText field={slice.primary.headline} />
@@ -61,25 +67,21 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         </div>
 
         {hasSub ? (
-          <div className={styles.subheadline}>
+          <div className={styles.brandLine}>
             <PrismicRichText field={slice.primary.subheadline} />
           </div>
         ) : (
-          <div className={styles.subheadline}>
+          <div className={styles.brandLine}>
             <p>{company.tagline}</p>
           </div>
         )}
 
+        <p className={styles.detailLine}>{company.description}</p>
+        <div className={styles.divider} aria-hidden />
+        <p className={styles.tagline}>{company.tagline}</p>
+
         {hasAnyCta ? (
           <div className={styles.ctas}>
-            {hasPrimaryCta && (
-              <PrismicNextLink
-                field={slice.primary.primary_cta_link}
-                className={styles.primaryCta}
-              >
-                {slice.primary.primary_cta_label}
-              </PrismicNextLink>
-            )}
             {hasSecondaryCta && (
               <PrismicNextLink
                 field={slice.primary.secondary_cta_link}
@@ -88,8 +90,18 @@ const Hero: FC<HeroProps> = ({ slice }) => {
                 {slice.primary.secondary_cta_label}
               </PrismicNextLink>
             )}
+            {hasPrimaryCta && (
+              <PrismicNextLink
+                field={slice.primary.primary_cta_link}
+                className={styles.primaryCta}
+              >
+                {slice.primary.primary_cta_label}
+              </PrismicNextLink>
+            )}
           </div>
         ) : null}
+
+        <p className={styles.scrollCue}>Scroll</p>
       </div>
     </section>
   );

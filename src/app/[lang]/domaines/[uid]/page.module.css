@@ -1,0 +1,197 @@
+/* ── Domaine Detail Page ──────────────────────────────────────────────── */
+
+.hero {
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+}
+
+.heroBg img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroPlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, var(--bv-noir) 0%, #3a1522 45%, #1a0a10 100%);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44, 16, 24, 0.35) 0%, rgba(44, 16, 24, 0.7) 100%);
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 80px 52px;
+  text-align: center;
+}
+
+.heroAppellation {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--bv-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.75;
+}
+
+.heroName {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--bv-parchment);
+}
+
+/* Main layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 0;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 64px 80px;
+}
+
+.narrative {
+  padding-right: 72px;
+}
+
+.sectionLabel {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--bv-limestone);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.65;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin-bottom: 16px;
+}
+
+.narrativeBlock {
+  margin-bottom: 36px;
+}
+
+.narrativeText {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--bv-encre);
+  opacity: 0.7;
+}
+
+.pullQuote {
+  background: var(--bv-noir);
+  padding: 36px 40px;
+  margin-top: 8px;
+}
+
+.pullQuoteFr {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--bv-parchment);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.pullQuoteEn {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--bv-gold);
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+}
+
+.pullQuoteAttr {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--bv-limestone);
+  opacity: 0.5;
+  letter-spacing: 0.08em;
+}
+
+/* Sidebar */
+.sidebar {
+  min-width: 0;
+}
+
+.winePlaceholder {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--bv-encre);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 32px;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--bv-limestone);
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  padding: 0;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    padding: 48px 40px;
+    gap: 48px;
+  }
+
+  .narrative {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 320px;
+  }
+
+  .heroContent {
+    padding: 0 20px 32px;
+  }
+
+  .heroName {
+    font-size: 36px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+  }
+
+  .narrative {
+    padding-right: 0;
+  }
+}

@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { defaultLocale } from "@/i18n";
+import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -29,8 +30,6 @@ export default async function RootLayout({
     <html lang={lang} className={`${cormorant.variable} ${inter.variable}`}>
       <body
         style={{
-          margin: 0,
-          minHeight: "100vh",
           backgroundColor: "#f7f4ef",
           backgroundImage: "url(/paper-tile.webp)",
           backgroundRepeat: "repeat",

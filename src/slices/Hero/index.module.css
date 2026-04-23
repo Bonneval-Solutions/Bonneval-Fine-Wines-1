@@ -1,21 +1,18 @@
 /* Brand tokens — Bonneval Fine Wines (see docs/branding-guide) */
 .hero {
   --bv-burgundy-noir: #2c1018;
+  --bv-burgundy-dark: #1f0d14;
   --bv-antique-gold: #c2a355;
   --bv-parchment: #f5f0e8;
-  --bv-encre: #1a1a1a;
-  --bv-limestone: #8b8590;
-  --bv-domaine-vert: #6b7d6b;
   --bv-radius: 0.25rem;
 
   position: relative;
   isolation: isolate;
   display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
-  min-height: calc(100svh - var(--site-header-offset, 5rem));
-  padding: clamp(1.5rem, 4vw, 3.5rem);
-  padding-left: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: clamp(1.25rem, 4vw, 3rem);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -37,11 +34,18 @@
   inset: 0;
   z-index: 0;
   background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 3px,
+      transparent 3px,
+      transparent 10px
+    ),
     linear-gradient(
-      145deg,
-      var(--bv-burgundy-noir) 0%,
-      #3a1522 45%,
-      #1a0a10 100%
+      180deg,
+      #452735 0%,
+      #341a29 35%,
+      var(--bv-burgundy-noir) 100%
     );
   animation: heroImageIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -53,42 +57,51 @@
   pointer-events: none;
   background:
     linear-gradient(
-      90deg,
-      rgba(44, 16, 24, 0.88) 0%,
-      rgba(44, 16, 24, 0.55) 38%,
-      rgba(44, 16, 24, 0.22) 68%,
-      rgba(44, 16, 24, 0.06) 100%
+      180deg,
+      rgba(31, 13, 20, 0.45) 0%,
+      rgba(31, 13, 20, 0.75) 100%
     ),
     linear-gradient(
-      180deg,
-      rgba(44, 16, 24, 0.15) 0%,
-      rgba(44, 16, 24, 0.45) 100%
+      90deg,
+      rgba(31, 13, 20, 0.22) 0%,
+      rgba(31, 13, 20, 0.22) 100%
     );
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
-  align-self: center;
   width: 100%;
-  max-width: min(36rem, 100%);
-  margin-left: auto;
-  text-align: right;
+  max-width: min(62rem, 100%);
+  text-align: center;
   color: var(--bv-parchment);
+  padding-block: clamp(2rem, 10vh, 6rem);
+}
+
+.location {
+  margin: 0;
+  font-family: var(--font-body), Inter, system-ui, sans-serif;
+  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(194, 163, 85, 0.85);
+  animation: fadeUpSoft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
 }
 
 .headline {
-  animation: headlineFromRight 1s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
+  margin-top: clamp(0.85rem, 2.2vw, 1.6rem);
+  animation: fadeUpSoft 1s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
 }
 
 .headline :global(h1) {
   margin: 0;
   font-family: var(--font-heading), "Cormorant Garamond", serif;
-  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  font-size: clamp(3rem, 10vw, 6.5rem);
   font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: 0.06em;
-  color: var(--bv-antique-gold);
+  line-height: 0.95;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bv-parchment);
   text-wrap: balance;
 }
 
@@ -98,33 +111,63 @@
 }
 
 .wordmarkLine + .wordmarkLine {
-  margin-top: 0.12em;
+  margin-top: 0.2em;
 }
 
-.subheadline {
-  margin-top: clamp(1rem, 2.2vw, 1.75rem);
-  max-width: 42ch;
-  margin-left: auto;
-  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.95s both;
+.brandLine {
+  margin-top: clamp(0.35rem, 1vw, 0.7rem);
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
 }
 
-.subheadline :global(p) {
+.brandLine :global(p) {
+  margin: 0;
+  font-family: var(--font-heading), "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 2.6vw, 2.05rem);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--bv-antique-gold);
+}
+
+.detailLine,
+.tagline,
+.scrollCue {
   margin: 0;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: clamp(0.95rem, 1.35vw, 1.125rem);
-  font-weight: 400;
-  line-height: 1.65;
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.detailLine {
+  margin-top: clamp(0.75rem, 2vw, 1.4rem);
+  font-size: clamp(0.53rem, 0.86vw, 0.66rem);
+  letter-spacing: 0.22em;
+  color: rgba(194, 163, 85, 0.56);
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.78s both;
+}
+
+.divider {
+  width: 3rem;
+  max-width: 30%;
+  height: 1px;
+  margin: clamp(0.65rem, 1.25vw, 0.95rem) auto 0;
+  background: rgba(194, 163, 85, 0.9);
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.85s both;
+}
+
+.tagline {
+  margin-top: clamp(1.3rem, 2.9vw, 2.35rem);
+  font-size: clamp(0.8rem, 1.25vw, 1.18rem);
+  letter-spacing: 0.2em;
   color: rgba(245, 240, 232, 0.92);
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.96s both;
 }
 
 .ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: flex-end;
-  margin-top: clamp(1.35rem, 2.5vw, 2rem);
-  animation: fadeUpSoft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+  gap: 0.9rem;
+  justify-content: center;
+  margin-top: clamp(1.5rem, 4vw, 2.9rem);
+  animation: fadeUpSoft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.15s both;
 }
 
 .primaryCta,
@@ -132,13 +175,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--bv-radius);
+  min-height: 2.85rem;
+  min-width: clamp(12.5rem, 22vw, 15.5rem);
+  padding: 0.8rem 1.6rem;
+  border-radius: 0;
   text-decoration: none;
   font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.79rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
@@ -149,7 +195,7 @@
 .primaryCta {
   background: var(--bv-antique-gold);
   color: var(--bv-burgundy-noir);
-  border: 1px solid transparent;
+  border: 1px solid var(--bv-antique-gold);
 }
 
 .primaryCta:hover {
@@ -160,13 +206,21 @@
 .secondaryCta {
   background: transparent;
   color: var(--bv-parchment);
-  border: 1px solid rgba(194, 163, 85, 0.55);
+  border: 1px solid rgba(245, 240, 232, 0.55);
 }
 
 .secondaryCta:hover {
   transform: translateY(-1px);
-  border-color: var(--bv-antique-gold);
-  color: var(--bv-antique-gold);
+  border-color: rgba(245, 240, 232, 0.95);
+  color: rgba(245, 240, 232, 0.95);
+}
+
+.scrollCue {
+  margin-top: clamp(2.5rem, 8vh, 5rem);
+  font-size: 0.625rem;
+  letter-spacing: 0.34em;
+  color: rgba(194, 163, 85, 0.68);
+  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 1.35s both;
 }
 
 @keyframes heroImageIn {
@@ -204,11 +258,10 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: calc(100svh - var(--site-header-offset, 5rem));
+    min-height: 100svh;
     max-height: none;
-    align-items: flex-end;
+    align-items: center;
     padding: 1.25rem;
-    padding-bottom: clamp(2rem, 8vh, 3rem);
   }
 
   .overlay {
@@ -228,19 +281,16 @@
 
   .heroContent {
     max-width: 100%;
-    text-align: left;
+    text-align: center;
   }
 
-  .subheadline {
-    margin-left: 0;
+  .headline :global(h1) {
+    letter-spacing: 0.11em;
   }
 
   .ctas {
-    justify-content: flex-start;
-  }
-
-  .headline {
-    animation-name: headlineFromRight;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

@@ -1,0 +1,141 @@
+.section {
+  background: var(--bv-parchment);
+  padding: var(--section-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--bv-limestone);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.65;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--bv-encre);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin-bottom: 24px;
+}
+
+.body :global(p) {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--bv-encre);
+  opacity: 0.65;
+  text-wrap: pretty;
+  margin: 0;
+}
+
+/* WhatsApp mock */
+.mockWrap {
+  background: #e8d5b0;
+  padding: 28px 24px;
+  max-width: 380px;
+}
+
+.mockHeader {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--bv-limestone);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.mockMessage {
+  background: var(--bv-parchment);
+  padding: 20px 22px;
+  box-shadow: 0 2px 8px rgba(44, 16, 24, 0.08);
+}
+
+.mockWineName {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--bv-encre);
+  margin-bottom: 4px;
+}
+
+.mockNarrative {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--bv-encre);
+  opacity: 0.7;
+  margin-bottom: 14px;
+  text-wrap: pretty;
+}
+
+.mockNarrative :global(p) {
+  margin: 0;
+}
+
+.mockFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--bv-parchment-dark);
+  padding-top: 12px;
+}
+
+.mockPrice {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--bv-encre);
+}
+
+.mockReply {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--bv-limestone);
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.mockAvail {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  color: var(--bv-limestone);
+  text-align: right;
+  margin-top: 6px;
+  opacity: 0.45;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .headline {
+    font-size: 30px;
+  }
+
+  .mockWrap {
+    max-width: 100%;
+  }
+}

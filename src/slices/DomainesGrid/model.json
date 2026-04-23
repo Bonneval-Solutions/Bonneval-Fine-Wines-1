@@ -1,0 +1,64 @@
+{
+  "id": "domaines_grid",
+  "type": "SharedSlice",
+  "name": "DomainesGrid",
+  "description": "5x2 grid of domaine cards with hover effect",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Grid of domaine producer cards linked to domaine pages",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "The portfolio"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "The ten houses of Bonneval"
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label",
+            "placeholder": "Explore all domaines"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "domaine": {
+          "type": "Link",
+          "config": {
+            "label": "Domaine",
+            "select": "document",
+            "customtypes": ["domaine"]
+          }
+        },
+        "card_image": {
+          "type": "Image",
+          "config": {
+            "label": "Card Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": ""
+    }
+  ]
+}

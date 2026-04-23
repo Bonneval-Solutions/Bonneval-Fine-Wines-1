@@ -1,7 +1,12 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { company } from "@/lib/company";
+import styles from "./Header.module.css";
 
 type HeaderProps = {
   config: Content.LayoutDocumentData | null;
@@ -9,79 +14,148 @@ type HeaderProps = {
 };
 
 const placeholderLinks = [
+  { label: "The Wines", href: "#" },
   { label: "Domaines", href: "#" },
-  { label: "Cuvées", href: "#" },
-  { label: "Cercle Privé", href: "#" },
-  { label: "Notre Histoire", href: "#" },
+  { label: "Members", href: "#" },
+  { label: "About", href: "#" },
   { label: "Contact", href: "#" },
 ];
 
 export function Header({ config, lang }: HeaderProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isHome =
+    pathname === `/${lang}` || pathname === `/${lang}/`;
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", handler, { passive: true });
+    handler();
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  const transparent = isHome && !scrolled && !mobileOpen;
   const hasNav = config?.nav_links && config.nav_links.length > 0;
 
-  return (
-    <header
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "1rem 2rem",
-        borderBottom: "1px solid #e5e5e5",
-      }}
-    >
-      <div>
-        {config?.header_logo?.url ? (
-          <PrismicNextImage
-            field={config.header_logo}
-            style={{ height: 40, width: "auto" }}
-          />
-        ) : (
-          <span
-            style={{
-              fontFamily: "var(--font-heading), serif",
-              fontSize: "1.25rem",
-              fontWeight: 600,
-              letterSpacing: "0.05em",
-            }}
-          >
-            {company.name}
-          </span>
-        )}
-      </div>
+  const isActive = (href: string) => {
+    if (href === "#") return false;
+    return pathname.startsWith(href);
+  };
 
-      <nav style={{ display: "flex", gap: "1.5rem" }}>
+  return (
+    <>
+      <header
+        className={`${styles.header} ${transparent ? styles.transparent : styles.solid}`}
+      >
+        <div className={styles.inner}>
+          {config?.header_logo?.url ? (
+            <PrismicNextLink href={`/${lang}`} className={styles.wordmark}>
+              <PrismicNextImage
+                field={config.header_logo}
+                style={{ height: 32, width: "auto" }}
+              />
+            </PrismicNextLink>
+          ) : (
+            <a href={`/${lang}`} className={styles.wordmark}>
+              {company.name.split(" ")[0] || "Bonneval"}
+            </a>
+          )}
+
+          <nav className={styles.desktopNav}>
+            {hasNav
+              ? config!.nav_links.map((item, i) => {
+                  const href =
+                    (item.link as { url?: string })?.url || "#";
+                  return (
+                    <PrismicNextLink
+                      key={i}
+                      field={item.link}
+                      className={`${styles.navLink} ${isActive(href) ? styles.active : ""}`}
+                    >
+                      {item.label}
+                    </PrismicNextLink>
+                  );
+                })
+              : placeholderLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={styles.navLink}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+
+            <a href={`/${lang}/members`} className={styles.ctaButton}>
+              Request Access
+            </a>
+
+            <div className={styles.langWrap}>
+              <LanguageSwitcher lang={lang} />
+            </div>
+          </nav>
+
+          <button
+            className={`${styles.hamburger} ${mobileOpen ? styles.open : ""}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile overlay */}
+      <div
+        className={`${styles.mobileOverlay} ${mobileOpen ? styles.open : ""}`}
+      >
         {hasNav
-          ? config!.nav_links.map((item, i) => (
-              <PrismicNextLink
-                key={i}
-                field={item.link}
-                style={{
-                  fontFamily: "var(--font-body), sans-serif",
-                  fontSize: "0.875rem",
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                {item.label}
-              </PrismicNextLink>
-            ))
+          ? config!.nav_links.map((item, i) => {
+              const href =
+                (item.link as { url?: string })?.url || "#";
+              return (
+                <PrismicNextLink
+                  key={i}
+                  field={item.link}
+                  className={`${styles.mobileNavLink} ${isActive(href) ? styles.active : ""}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </PrismicNextLink>
+              );
+            })
           : placeholderLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                style={{
-                  fontFamily: "var(--font-body), sans-serif",
-                  fontSize: "0.875rem",
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
+                className={styles.mobileNavLink}
+                onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-      </nav>
 
-      <LanguageSwitcher lang={lang} />
-    </header>
+        <a
+          href={`/${lang}/members`}
+          className={`${styles.ctaButton} ${styles.mobileCta}`}
+          onClick={() => setMobileOpen(false)}
+        >
+          Request Access
+        </a>
+
+        <div className={styles.mobileLang}>
+          <LanguageSwitcher lang={lang} />
+        </div>
+      </div>
+    </>
   );
 }

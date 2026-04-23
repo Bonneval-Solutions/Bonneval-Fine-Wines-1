@@ -1,0 +1,136 @@
+.section {
+  background: var(--bv-parchment);
+  padding: var(--section-padding);
+  padding-top: calc(var(--header-height) + 88px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 96px;
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.imageCol {
+  position: sticky;
+  top: 100px;
+  height: 580px;
+  overflow: hidden;
+}
+
+.imageCol img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(-45deg, #1a0c10 0px, #1a0c10 5px, #241018 5px, #241018 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bv-gold);
+  opacity: 0.65;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.textCol {
+  padding-top: 8px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--bv-gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  opacity: 0.72;
+}
+
+.headline :global(h1) {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--bv-encre);
+  margin: 0 0 22px;
+  line-height: 1.1;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin-bottom: 28px;
+}
+
+.body :global(p) {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--bv-encre);
+  opacity: 0.68;
+  margin: 0 0 18px;
+  text-wrap: pretty;
+}
+
+.blockquote {
+  border-left: 2px solid var(--bv-gold);
+  padding-left: 22px;
+  margin: 28px 0;
+}
+
+.blockquote p {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-style: italic;
+  color: var(--bv-encre);
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-top: calc(var(--header-height) + 64px);
+  }
+
+  .grid {
+    gap: 48px;
+  }
+
+  .imageCol {
+    height: 400px;
+  }
+
+  .headline :global(h1) {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: calc(var(--header-height) + 48px);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .imageCol {
+    position: relative;
+    top: auto;
+    height: 300px;
+  }
+
+  .headline :global(h1) {
+    font-size: 32px;
+  }
+}

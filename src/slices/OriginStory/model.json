@@ -1,0 +1,59 @@
+{
+  "id": "origin_story",
+  "type": "SharedSlice",
+  "name": "OriginStory",
+  "description": "Two-column origin story with sticky image and narrative",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Sticky archival image left, long narrative right with blockquote",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "The story"
+          }
+        },
+        "archival_image": {
+          "type": "Image",
+          "config": {
+            "label": "Archival Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Headline",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading1"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        },
+        "pull_quote": {
+          "type": "Text",
+          "config": {
+            "label": "Pull Quote",
+            "placeholder": "The constraint is the brand."
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": ""
+    }
+  ]
+}

@@ -7,6 +7,12 @@ import { locales, normalizeLocale } from "@/i18n";
 import { notFound } from "next/navigation";
 
 type Params = { lang: string };
+const domainesGridFetchLinks = [
+  "domaine.name",
+  "domaine.appellation",
+  "domaine.descriptor",
+  "domaine.hero_image",
+];
 
 export default async function Home({
   params,
@@ -18,12 +24,12 @@ export default async function Home({
   if (!locale) notFound();
   const client = createClient();
   const home = await client
-    .getByUID("page", "home", { lang: locale })
+    .getByUID("page", "home", { lang: locale, fetchLinks: domainesGridFetchLinks })
     .catch(() => null);
 
   if (!home) {
     return (
-      <section style={{ padding: "4rem 2rem", textAlign: "center" }}>
+      <section style={{ padding: "4rem 2rem", paddingTop: "calc(var(--header-height) + 4rem)", textAlign: "center" }}>
         <h1>Bonneval Fine Wines</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -46,7 +52,7 @@ export async function generateMetadata({
   if (!locale) notFound();
   const client = createClient();
   const home = await client
-    .getByUID("page", "home", { lang: locale })
+    .getByUID("page", "home", { lang: locale, fetchLinks: domainesGridFetchLinks })
     .catch(() => null);
 
   if (!home) {

@@ -1,0 +1,40 @@
+{
+  "id": "application_form",
+  "type": "SharedSlice",
+  "name": "ApplicationForm",
+  "description": "Membership application form on dark background",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "6-field application form with submit CTA",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "Apply"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "Request an invitation"
+          }
+        },
+        "subline": {
+          "type": "Text",
+          "config": {
+            "label": "Subline",
+            "placeholder": "The founder personally reviews every expression of interest."
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": ""
+    }
+  ]
+}

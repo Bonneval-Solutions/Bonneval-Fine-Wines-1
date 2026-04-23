@@ -5,4 +5,18 @@ import dynamic from "next/dynamic";
 export const components = {
   hero: dynamic(() => import("./Hero")),
   rich_text: dynamic(() => import("./RichText")),
+  three_column_features: dynamic(() => import("./ThreeColumnFeatures")),
+  featured_wine: dynamic(() => import("./FeaturedWine")),
+  domaines_grid: dynamic(() => import("./DomainesGrid")),
+  members_teaser: dynamic(() => import("./MembersTeaser")),
+  members_hero: dynamic(() => import("./MembersHero")),
+  how_it_works: dynamic(() => import("./HowItWorks")),
+  membership_tiers: dynamic(() => import("./MembershipTiers")),
+  whats_app_preview: dynamic(() => import("./WhatsAppPreview")),
+  application_form: dynamic(() => import("./ApplicationForm")),
+  origin_story: dynamic(() => import("./OriginStory")),
+  geography: dynamic(() => import("./Geography")),
+  domaines_list: dynamic(() => import("./DomainesList")),
+  contact_blocks: dynamic(() => import("./ContactBlocks")),
+  bottom_contact_cta: dynamic(() => import("./BottomContactCta")),
 };

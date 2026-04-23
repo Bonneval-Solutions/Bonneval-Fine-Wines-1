@@ -1,0 +1,85 @@
+{
+  "id": "contact_blocks",
+  "type": "SharedSlice",
+  "name": "ContactBlocks",
+  "description": "3-card grid for contact methods",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Three contact cards: WhatsApp, Email, Visit",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "Reach us"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "Contact"
+          }
+        },
+        "subline": {
+          "type": "Text",
+          "config": {
+            "label": "Subline",
+            "placeholder": "We prefer conversation to correspondence."
+          }
+        }
+      },
+      "items": {
+        "icon_glyph": {
+          "type": "Text",
+          "config": {
+            "label": "Icon Glyph",
+            "placeholder": "◎"
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": "WhatsApp"
+          }
+        },
+        "primary_text": {
+          "type": "Text",
+          "config": {
+            "label": "Primary Text",
+            "placeholder": "+359 88 XXX XXXX"
+          }
+        },
+        "secondary_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Secondary Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label (optional)",
+            "placeholder": "Message on WhatsApp"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link (optional)",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": ""
+    }
+  ]
+}

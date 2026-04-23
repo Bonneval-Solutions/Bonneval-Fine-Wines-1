@@ -1,0 +1,196 @@
+.section {
+  background: var(--bv-noir);
+  padding: var(--section-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.imageWrap {
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageWrap img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(-45deg, #1a0c10 0px, #1a0c10 5px, #241018 5px, #241018 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bv-gold);
+  opacity: 0.65;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.collectionTag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--bv-gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(194, 163, 85, 0.38);
+  padding: 4px 10px;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--bv-gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.75;
+}
+
+.domaineName {
+  font-family: var(--font-display);
+  font-size: 54px;
+  font-weight: 400;
+  color: var(--bv-parchment);
+  margin-bottom: 6px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.wineName {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-style: italic;
+  color: var(--bv-gold);
+  margin-bottom: 8px;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--bv-gold);
+  margin: 24px 0;
+}
+
+.narrative {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--bv-parchment);
+  opacity: 0.65;
+  margin-bottom: 32px;
+}
+
+.narrative :global(p) {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.badgeAvailable {
+  border: 1px solid var(--bv-vert);
+  color: var(--bv-vert);
+}
+
+.badgeAllocation {
+  border: 1px solid var(--bv-gold);
+  color: var(--bv-gold);
+}
+
+.badgePreArrival {
+  border: 1px solid var(--bv-limestone);
+  color: var(--bv-limestone);
+}
+
+.ctas {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.ctaPrimary {
+  background: transparent;
+  border: 1px solid var(--bv-gold);
+  color: var(--bv-gold);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.ctaPrimary:hover {
+  background: var(--bv-gold);
+  color: var(--bv-noir);
+}
+
+.ctaSecondary {
+  background: none;
+  border: none;
+  color: var(--bv-parchment);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.45;
+  text-decoration: underline;
+  text-decoration-color: rgba(245, 240, 232, 0.19);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 48px;
+  }
+
+  .domaineName {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .imageWrap {
+    height: 360px;
+  }
+
+  .domaineName {
+    font-size: 36px;
+  }
+
+  .wineName {
+    font-size: 20px;
+  }
+}

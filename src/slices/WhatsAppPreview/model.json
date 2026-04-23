@@ -1,0 +1,72 @@
+{
+  "id": "whats_app_preview",
+  "type": "SharedSlice",
+  "name": "WhatsAppPreview",
+  "description": "Two-column with editorial text and stylised WhatsApp message mock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "WhatsApp allocation preview with sample message",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "How offers arrive"
+          }
+        },
+        "headline": {
+          "type": "Text",
+          "config": {
+            "label": "Headline",
+            "placeholder": "The allocation message"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        },
+        "sample_wine_name": {
+          "type": "Text",
+          "config": {
+            "label": "Sample Wine Name",
+            "placeholder": "Armand Rousseau — Gevrey-Chambertin 2022"
+          }
+        },
+        "sample_narrative": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Sample Narrative",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          }
+        },
+        "sample_price": {
+          "type": "Text",
+          "config": {
+            "label": "Sample Price",
+            "placeholder": "€420 / bottle"
+          }
+        },
+        "available_until": {
+          "type": "Text",
+          "config": {
+            "label": "Available Until",
+            "placeholder": "Available until Friday"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": ""
+    }
+  ]
+}

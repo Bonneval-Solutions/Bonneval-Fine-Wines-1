@@ -1,0 +1,85 @@
+{
+  "id": "featured_wine",
+  "type": "SharedSlice",
+  "name": "FeaturedWine",
+  "description": "Editorial two-column featured wine section on dark background",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Featured wine with bottle image and terroir narrative",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": "Featured selection"
+          }
+        },
+        "bottle_image": {
+          "type": "Image",
+          "config": {
+            "label": "Bottle Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "collection_tag": {
+          "type": "Text",
+          "config": {
+            "label": "Collection Tag",
+            "placeholder": "Collection 2024"
+          }
+        },
+        "domaine_name": {
+          "type": "Text",
+          "config": {
+            "label": "Domaine Name",
+            "placeholder": "Armand Rousseau"
+          }
+        },
+        "wine_name": {
+          "type": "Text",
+          "config": {
+            "label": "Wine Name",
+            "placeholder": "Gevrey-Chambertin Clos St-Jacques 2021"
+          }
+        },
+        "narrative": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Narrative",
+            "placeholder": "Terroir-first description",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          }
+        },
+        "availability": {
+          "type": "Select",
+          "config": {
+            "label": "Availability",
+            "options": ["Available now", "Allocation only", "Pre-arrival"]
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label",
+            "placeholder": "View wine"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": ""
+    }
+  ]
+}
