@@ -36,7 +36,10 @@ const DomainesGrid: FC<Props> = ({ slice }) => {
       <div className={styles.grid}>
         {hasItems
           ? slice.items.map((item, i) => {
-              const linkedDomaine = isFilled.contentRelationship(item.domaine)
+              const linkedDomaine =
+                isFilled.link(item.domaine) &&
+                item.domaine.link_type === "Document" &&
+                "data" in item.domaine
                 ? (item.domaine.data as Partial<Content.DomaineDocument["data"]> | undefined)
                 : undefined;
               const cardName = linkedDomaine?.name || "Domaine";
