@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getLocale, normalizeLocale } from "./i18n";
+import { defaultLocale, normalizeLocale } from "./i18n";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -19,6 +19,16 @@ export function proxy(request: NextRequest) {
   const pathLocale = first ? normalizeLocale(first) : null;
 
   if (pathLocale) {
+    // Temporarily English-only: redirect French URLs to the same path under en-us.
+    if (pathLocale === "fr-fr") {
+      const rest = segments.slice(1).join("/");
+      const url = request.nextUrl.clone();
+      url.pathname = rest
+        ? `/${defaultLocale}/${rest}`
+        : `/${defaultLocale}`;
+      return NextResponse.redirect(url, 308);
+    }
+
     if (first !== pathLocale) {
       const rest = segments.slice(1).join("/");
       const url = request.nextUrl.clone();
@@ -30,9 +40,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
-  const locale = getLocale(request);
+  // Temporarily skip Accept-Language negotiation; always use English.
   const url = request.nextUrl.clone();
-  url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
+  url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
 
   return NextResponse.redirect(url);
 }

@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { defaultLocale } from "@/i18n";
@@ -18,6 +18,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +34,10 @@ export default async function RootLayout({
   const lang = headersList.get("x-locale") || defaultLocale;
 
   return (
-    <html lang={lang} className={`${cormorant.variable} ${inter.variable}`}>
+    <html
+      lang={lang}
+      className={`${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body
         style={{
           backgroundColor: "#f7f4ef",

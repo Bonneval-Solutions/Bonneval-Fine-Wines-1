@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import type { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { usePathname } from "next/navigation";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+// Temporarily disabled — French locale is not public yet.
+// import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { company } from "@/lib/company";
 import styles from "./Header.module.css";
 
@@ -97,9 +98,11 @@ export function Header({ config, lang }: HeaderProps) {
               Request Access
             </a>
 
+            {/* Temporarily disabled — French locale is not public yet.
             <div className={styles.langWrap}>
               <LanguageSwitcher lang={lang} />
             </div>
+            */}
           </nav>
 
           <button
@@ -152,9 +155,11 @@ export function Header({ config, lang }: HeaderProps) {
           Request Access
         </a>
 
+        {/* Temporarily disabled — French locale is not public yet.
         <div className={styles.mobileLang}>
           <LanguageSwitcher lang={lang} />
         </div>
+        */}
       </div>
     </>
   );

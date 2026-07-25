@@ -46,8 +46,10 @@ export function Footer({ config }: FooterProps) {
         </div>
 
         <div className={styles.brandCenter}>
-          <p className={styles.brandName}>Bonneval</p>
-          <p className={styles.brandSub}>Fine Wines</p>
+          <div className={styles.brandBox}>
+            <p className={styles.brandName}>Bonneval</p>
+            <p className={styles.brandSub}>Fine Wines</p>
+          </div>
         </div>
 
         <div className={styles.contactRight}>

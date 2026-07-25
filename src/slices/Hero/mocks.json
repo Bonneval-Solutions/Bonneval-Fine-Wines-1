@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Bonneval Fine Wines"
+              "text": "Bonneval"
             }
           }
         ]
@@ -20,10 +20,22 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Sole importer. Ten domaines. By invitation."
+              "text": "Fine Wines"
             }
           }
         ]
+      },
+      "eyebrow": {
+        "__TYPE__": "FieldContent",
+        "value": "Sofia · Bulgaria"
+      },
+      "detail_line": {
+        "__TYPE__": "FieldContent",
+        "value": "Sofia's sole gateway to ten of Burgundy's most revered domaines."
+      },
+      "tagline": {
+        "__TYPE__": "FieldContent",
+        "value": "Sole importer. Ten domaines. By invitation."
       },
       "primary_cta_label": {
         "__TYPE__": "FieldContent",

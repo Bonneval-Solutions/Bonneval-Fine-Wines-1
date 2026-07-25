@@ -29,6 +29,27 @@
             "single": "paragraph"
           }
         },
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow (small line above the wordmark)",
+            "placeholder": "Sofia · Bulgaria"
+          }
+        },
+        "detail_line": {
+          "type": "Text",
+          "config": {
+            "label": "Detail line (under the wordmark)",
+            "placeholder": "Sofia's sole gateway to ten of Burgundy's most revered domaines."
+          }
+        },
+        "tagline": {
+          "type": "Text",
+          "config": {
+            "label": "Tagline (above the CTAs)",
+            "placeholder": "Sole importer. Ten domaines. By invitation."
+          }
+        },
         "primary_cta_label": {
           "type": "Text",
           "config": {

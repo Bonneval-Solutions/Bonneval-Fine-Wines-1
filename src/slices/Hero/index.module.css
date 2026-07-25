@@ -1,6 +1,6 @@
 /* Brand tokens — Bonneval Fine Wines (see docs/branding-guide) */
 .hero {
-  --bv-burgundy-dark: #1f0d14;
+  --bv-burgundy-dark: #3c141c;
   --bv-antique-gold: #c2a355;
   --bv-parchment: #f5f0e8;
   --bv-radius: 0.25rem;
@@ -42,8 +42,8 @@
     ),
     linear-gradient(
       180deg,
-      #452735 0%,
-      #341a29 35%,
+      #5c2530 0%,
+      #4a1c25 35%,
       var(--bv-noir) 100%
     );
   animation: heroImageIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -57,13 +57,13 @@
   background:
     linear-gradient(
       180deg,
-      rgba(31, 13, 20, 0.45) 0%,
-      rgba(31, 13, 20, 0.75) 100%
+      rgba(60, 20, 28, 0.45) 0%,
+      rgba(60, 20, 28, 0.75) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(31, 13, 20, 0.22) 0%,
-      rgba(31, 13, 20, 0.22) 100%
+      rgba(60, 20, 28, 0.22) 0%,
+      rgba(60, 20, 28, 0.22) 100%
     );
 }
 
@@ -77,28 +77,38 @@
   padding-block: clamp(2rem, 10vh, 6rem);
 }
 
-.location {
-  margin: 0;
-  font-family: var(--font-body), Inter, system-ui, sans-serif;
-  font-size: clamp(0.625rem, 0.9vw, 0.75rem);
+/* Card front ".maison" line — Cormorant gold small caps */
+.eyebrow {
+  margin: 0 0 clamp(1.15rem, 2.6vw, 1.85rem);
+  font-family: var(--font-heading), "Cormorant Garamond", serif;
+  font-size: clamp(0.75rem, 1.15vw, 0.95rem);
+  font-weight: 400;
   letter-spacing: 0.34em;
+  text-indent: 0.34em;
   text-transform: uppercase;
-  color: rgba(194, 163, 85, 0.85);
+  color: rgba(194, 163, 85, 0.9);
   animation: fadeUpSoft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
 }
 
-.headline {
-  margin-top: clamp(0.85rem, 2.2vw, 1.6rem);
+/* Card front ".frontbox" — gold-bordered wordmark lock-up */
+.wordmarkBox {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.5rem, 1.2vw, 0.85rem);
+  padding: clamp(1.1rem, 2.6vw, 1.9rem) clamp(1.5rem, 4.2vw, 3.1rem);
+  border: 1px solid var(--bv-antique-gold);
   animation: fadeUpSoft 1s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
 }
 
 .headline :global(h1) {
   margin: 0;
   font-family: var(--font-heading), "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 10vw, 6.5rem);
+  font-size: clamp(1.9rem, 5.4vw, 3.9rem);
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: 0.18em;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
   text-transform: uppercase;
   color: var(--bv-parchment);
   text-wrap: balance;
@@ -110,19 +120,18 @@
 }
 
 .wordmarkLine + .wordmarkLine {
-  margin-top: 0.2em;
-}
-
-.brandLine {
-  margin-top: clamp(0.35rem, 1vw, 0.7rem);
-  animation: fadeUpSoft 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
+  margin-top: 0.25em;
+  color: var(--bv-antique-gold);
 }
 
 .brandLine :global(p) {
   margin: 0;
   font-family: var(--font-heading), "Cormorant Garamond", serif;
-  font-size: clamp(1.2rem, 2.6vw, 2.05rem);
-  letter-spacing: 0.26em;
+  font-size: clamp(1.9rem, 5.4vw, 3.9rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
   text-transform: uppercase;
   color: var(--bv-antique-gold);
 }
@@ -136,7 +145,7 @@
 }
 
 .detailLine {
-  margin-top: clamp(0.75rem, 2vw, 1.4rem);
+  margin-top: clamp(1.1rem, 2.6vw, 1.9rem);
   font-size: clamp(0.53rem, 0.86vw, 0.66rem);
   letter-spacing: 0.22em;
   color: rgba(194, 163, 85, 0.56);
@@ -267,14 +276,14 @@
     background:
       linear-gradient(
         180deg,
-        rgba(44, 16, 24, 0.25) 0%,
-        rgba(44, 16, 24, 0.82) 55%,
-        rgba(44, 16, 24, 0.94) 100%
+        rgba(60, 20, 28, 0.25) 0%,
+        rgba(60, 20, 28, 0.82) 55%,
+        rgba(60, 20, 28, 0.94) 100%
       ),
       linear-gradient(
         90deg,
-        rgba(44, 16, 24, 0.35) 0%,
-        rgba(44, 16, 24, 0.35) 100%
+        rgba(60, 20, 28, 0.35) 0%,
+        rgba(60, 20, 28, 0.35) 100%
       );
   }
 
@@ -283,8 +292,15 @@
     text-align: center;
   }
 
-  .headline :global(h1) {
-    letter-spacing: 0.11em;
+  .wordmarkBox {
+    padding: 1rem 1.15rem;
+  }
+
+  .headline :global(h1),
+  .brandLine :global(p) {
+    font-size: clamp(1.45rem, 7.2vw, 1.9rem);
+    letter-spacing: 0.22em;
+    text-indent: 0.22em;
   }
 
   .ctas {
@@ -296,9 +312,13 @@
 @media (prefers-reduced-motion: reduce) {
   .heroBg,
   .heroBgPlaceholder,
-  .headline,
-  .subheadline,
-  .ctas {
+  .eyebrow,
+  .wordmarkBox,
+  .detailLine,
+  .divider,
+  .tagline,
+  .ctas,
+  .scrollCue {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

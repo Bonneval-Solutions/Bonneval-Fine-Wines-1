@@ -2,7 +2,7 @@
 
 :root {
   /* Brand colors */
-  --bv-noir: #2c1018;
+  --bv-noir: #3c141c;
   --bv-gold: #c2a355;
   --bv-parchment: #f5f0e8;
   --bv-parchment-dark: #e8e0cf;
@@ -13,7 +13,7 @@
   /* Fonts */
   --font-display: var(--font-heading), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-body), "Inter", "Helvetica Neue", sans-serif;
-  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", "Courier New", monospace;
 
   /* Layout */
   --header-height: 72px;

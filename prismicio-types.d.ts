@@ -184,6 +184,36 @@ export interface HeroSliceDefaultPrimary {
   subheadline: prismic.RichTextField;
 
   /**
+   * Eyebrow (small line above the wordmark) field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Sofia · Bulgaria
+   * - **API ID Path**: hero.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Detail line (under the wordmark) field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Sofia's sole gateway to ten of Burgundy's most revered domaines.
+   * - **API ID Path**: hero.primary.detail_line
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  detail_line: prismic.KeyTextField;
+
+  /**
+   * Tagline (above the CTAs) field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Sole importer. Ten domaines. By invitation.
+   * - **API ID Path**: hero.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tagline: prismic.KeyTextField;
+
+  /**
    * Primary CTA label field in *Hero → Primary*
    *
    * - **Field Type**: Text

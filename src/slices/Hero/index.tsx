@@ -33,10 +33,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     Boolean(slice.primary.secondary_cta_label) &&
     isFilled.link(slice.primary.secondary_cta_link);
   const hasAnyCta = hasPrimaryCta || hasSecondaryCta;
-  const location = [company.address.city, company.address.country]
-    .filter(Boolean)
-    .join(" · ")
-    .toUpperCase();
+  const eyebrow = slice.primary.eyebrow?.trim();
+  const detailLine = slice.primary.detail_line?.trim();
+  const tagline = slice.primary.tagline?.trim();
 
   return (
     <section className={styles.hero}>
@@ -56,29 +55,29 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className={styles.overlay} aria-hidden />
 
       <div className={styles.heroContent}>
-        {location ? <p className={styles.location}>{location}</p> : null}
+        {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
 
-        <div className={styles.headline}>
-          {hasHeadline ? (
-            <PrismicRichText field={slice.primary.headline} />
-          ) : (
-            <FallbackWordmark />
-          )}
+        <div className={styles.wordmarkBox}>
+          <div className={styles.headline}>
+            {hasHeadline ? (
+              <PrismicRichText field={slice.primary.headline} />
+            ) : (
+              <FallbackWordmark />
+            )}
+          </div>
+
+          {hasSub ? (
+            <div className={styles.brandLine}>
+              <PrismicRichText field={slice.primary.subheadline} />
+            </div>
+          ) : null}
         </div>
 
-        {hasSub ? (
-          <div className={styles.brandLine}>
-            <PrismicRichText field={slice.primary.subheadline} />
-          </div>
-        ) : (
-          <div className={styles.brandLine}>
-            <p>{company.tagline}</p>
-          </div>
-        )}
-
-        <p className={styles.detailLine}>{company.description}</p>
-        <div className={styles.divider} aria-hidden />
-        <p className={styles.tagline}>{company.tagline}</p>
+        {detailLine ? <p className={styles.detailLine}>{detailLine}</p> : null}
+        {detailLine || tagline ? (
+          <div className={styles.divider} aria-hidden />
+        ) : null}
+        {tagline ? <p className={styles.tagline}>{tagline}</p> : null}
 
         {hasAnyCta ? (
           <div className={styles.ctas}>

@@ -47,7 +47,7 @@
       "accent": ""
     },
     "colors": {
-      "primary": "#2C1018",
+      "primary": "#3C141C",
       "secondary": "#C2A355",
       "accent": "#6B7D6B",
       "background": "#F5F0E8",
@@ -81,7 +81,7 @@
       "accessKey": ""
     },
     "turnstile": {
-      "siteKey": ""
+      "siteKey": "0x4AAAAAAD8UPuhR6Sl_h4Yr"
     },
     "brevo": {
       "listId": ""
