@@ -5,6 +5,8 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { normalizeLocale } from "@/i18n";
+import { LegalPlaceholder } from "@/components/LegalPlaceholder";
+import { isLegalUid } from "@/lib/legal-placeholders";
 
 type Params = { lang: string; uid: string };
 const domainesGridFetchLinks = [
@@ -25,7 +27,12 @@ export default async function Page({
   const client = createClient();
   const page = await client
     .getByUID("page", uid, { lang: locale, fetchLinks: domainesGridFetchLinks })
-    .catch(() => notFound());
+    .catch(() => null);
+
+  if (!page) {
+    if (isLegalUid(uid)) return <LegalPlaceholder uid={uid} />;
+    notFound();
+  }
 
   return <SliceZone slices={page.data.slices} components={components} />;
 }
@@ -41,14 +48,28 @@ export async function generateMetadata({
   const client = createClient();
   const page = await client
     .getByUID("page", uid, { lang: locale, fetchLinks: domainesGridFetchLinks })
-    .catch(() => notFound());
+    .catch(() => null);
+
+  if (!page) {
+    if (isLegalUid(uid)) {
+      const { LEGAL_PLACEHOLDERS } = await import("@/lib/legal-placeholders");
+      const legal = LEGAL_PLACEHOLDERS[uid];
+      return {
+        title: legal.title,
+        description: legal.description,
+      };
+    }
+    notFound();
+  }
 
   return {
     title: asText(page.data.title),
     description: page.data.meta_description,
     openGraph: {
       title: page.data.meta_title ?? undefined,
-      images: [{ url: page.data.meta_image.url ?? "" }],
+      images: page.data.meta_image.url
+        ? [{ url: page.data.meta_image.url }]
+        : undefined,
     },
   };
 }
@@ -61,11 +82,23 @@ export async function generateStaticParams() {
     })
     .catch(() => []);
 
-  return pages.map((page) => {
+  const fromPrismic = pages.map((page) => {
     const lang = normalizeLocale(page.lang);
     return {
       lang: lang ?? page.lang,
       uid: page.uid,
     };
   });
+
+  const legalParams = ["privacy-policy", "terms", "cookie-policy"].map(
+    (uid) => ({ lang: "en-us", uid }),
+  );
+
+  const seen = new Set(fromPrismic.map((p) => `${p.lang}:${p.uid}`));
+  for (const p of legalParams) {
+    const key = `${p.lang}:${p.uid}`;
+    if (!seen.has(key)) fromPrismic.push(p);
+  }
+
+  return fromPrismic;
 }

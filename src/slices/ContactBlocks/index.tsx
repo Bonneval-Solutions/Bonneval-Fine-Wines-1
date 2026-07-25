@@ -6,30 +6,6 @@ import styles from "./index.module.css";
 
 type Props = SliceComponentProps<Content.ContactBlocksSlice>;
 
-const fallbackBlocks = [
-  {
-    glyph: "◎",
-    label: "WhatsApp",
-    primary: "+359 88 XXX XXXX",
-    secondary: "Preferred — direct line to the founder. The fastest way to begin.",
-    cta: "Message on WhatsApp",
-  },
-  {
-    glyph: "◇",
-    label: "Email",
-    primary: "cave@bonnevalwines.com",
-    secondary: "For enquiries, introductions, and longer correspondence.",
-    cta: "Send an email",
-  },
-  {
-    glyph: "◈",
-    label: "Visit",
-    primary: "Sofia, Bulgaria",
-    secondary: "By appointment. Private tastings available for members at our Sofia address.",
-    cta: null,
-  },
-];
-
 const ContactBlocks: FC<Props> = ({ slice }) => {
   const d = slice.primary;
   const hasItems = slice.items && slice.items.length > 0;
@@ -45,10 +21,10 @@ const ContactBlocks: FC<Props> = ({ slice }) => {
         </p>
       </div>
 
+      {hasItems ? (
       <div className={styles.cardGrid}>
         <div className={styles.cardGridInner}>
-          {hasItems
-            ? slice.items.map((item, i) => (
+          {slice.items.map((item, i) => (
                 <div key={i} className={styles.card}>
                   <div className={styles.cardGlyph}>
                     {item.icon_glyph || "◈"}
@@ -73,23 +49,10 @@ const ContactBlocks: FC<Props> = ({ slice }) => {
                       <span className={styles.cardCta}>{item.cta_label}</span>
                     ))}
                 </div>
-              ))
-            : fallbackBlocks.map((block, i) => (
-                <div key={i} className={styles.card}>
-                  <div className={styles.cardGlyph}>{block.glyph}</div>
-                  <p className={styles.cardLabel}>{block.label}</p>
-                  <div className={styles.cardDivider} />
-                  <p className={styles.cardPrimary}>{block.primary}</p>
-                  <div className={styles.cardSecondary}>
-                    <p>{block.secondary}</p>
-                  </div>
-                  {block.cta && (
-                    <span className={styles.cardCta}>{block.cta}</span>
-                  )}
-                </div>
               ))}
         </div>
       </div>
+      ) : null}
 
       <div className={styles.closingLine}>
         <p className={styles.closingText}>

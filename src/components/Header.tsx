@@ -109,6 +109,7 @@ export function Header({ config, lang }: HeaderProps) {
             className={`${styles.hamburger} ${mobileOpen ? styles.open : ""}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             <span />
             <span />

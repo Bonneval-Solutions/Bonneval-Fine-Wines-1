@@ -161,6 +161,20 @@
   opacity: 0.55;
 }
 
+.error {
+  grid-column: span 2;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e8b4b4;
+}
+
+.submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .form {
     grid-template-columns: 1fr;

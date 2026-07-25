@@ -18,11 +18,11 @@ const placeholderNavLinks = [
 
 export function Footer({ config }: FooterProps) {
   const hasLinks = config?.footer_links && config.footer_links.length > 0;
-  const email =
-    config?.email || company.contact.email || "cave@bonnevalwines.com";
+  const email = config?.email || company.contact.email || "";
   const address = config?.address || "";
-  const city = company.address?.city || "Sofia";
-  const country = company.address?.country || "Bulgaria";
+  const city = company.address?.city || "";
+  const country = company.address?.country || "";
+  const placeLine = [city, country].filter(Boolean).join(", ");
 
   return (
     <footer className={styles.footer}>
@@ -53,10 +53,10 @@ export function Footer({ config }: FooterProps) {
         </div>
 
         <div className={styles.contactRight}>
-          <p className={styles.contactCity}>
-            {address || `${city}, ${country}`}
-          </p>
-          <p className={styles.contactEmail}>{email}</p>
+          {address || placeLine ? (
+            <p className={styles.contactCity}>{address || placeLine}</p>
+          ) : null}
+          {email ? <p className={styles.contactEmail}>{email}</p> : null}
         </div>
       </div>
 
