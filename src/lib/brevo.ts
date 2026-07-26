@@ -16,9 +16,16 @@ function getApiKey(): string {
   return apiKey;
 }
 
-function getListId(): number | null {
-  const fromEnv = process.env.BREVO_LIST_ID;
-  const fromConfig = config.integrations.brevo.listId;
+type BrevoListKey = "inbound" | "callbacks";
+
+function getListId(key: BrevoListKey = "inbound"): number | null {
+  const brevo = config.integrations.brevo;
+  const fromEnv =
+    key === "callbacks"
+      ? process.env.BREVO_CALLBACKS_LIST_ID
+      : process.env.BREVO_LIST_ID;
+  const fromConfig =
+    key === "callbacks" ? brevo.callbacksListId : brevo.inboundListId;
   const raw = fromEnv || fromConfig;
   if (!raw) return null;
   const n = Number(raw);
@@ -43,11 +50,12 @@ async function ensureBrevoAttributes(apiKey: string, names: string[]) {
 export type BrevoContactInput = {
   email: string;
   attributes: Record<string, string>;
+  list?: BrevoListKey;
 };
 
 export async function addBrevoContact(input: BrevoContactInput) {
   const apiKey = getApiKey();
-  const listId = getListId();
+  const listId = getListId(input.list ?? "inbound");
 
   await ensureBrevoAttributes(apiKey, Object.keys(input.attributes));
 

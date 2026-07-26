@@ -109,7 +109,11 @@ export async function POST(req: NextRequest) {
   if (payload.howHeard) attributes.HOW_HEARD = payload.howHeard;
 
   try {
-    await addBrevoContact({ email: payload.email, attributes });
+    await addBrevoContact({
+      email: payload.email,
+      attributes,
+      list: "inbound",
+    });
   } catch (err) {
     console.error("[register] Brevo contacts error:", err);
     return NextResponse.json(

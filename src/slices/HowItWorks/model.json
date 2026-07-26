@@ -2,14 +2,14 @@
   "id": "how_it_works",
   "type": "SharedSlice",
   "name": "HowItWorks",
-  "description": "4-step numbered process with gold numerals",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Numbered process steps on parchment",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Numbered process steps on parchment",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -46,12 +46,12 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "single": "paragraph",
+            "allowTargetBlank": false
           }
         }
-      },
-      "imageUrl": ""
+      }
     }
-  ]
+  ],
+  "description": "4-step numbered process with gold numerals"
 }

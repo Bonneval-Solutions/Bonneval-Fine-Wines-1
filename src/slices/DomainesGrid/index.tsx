@@ -98,9 +98,9 @@ const DomainesGrid: FC<Props> = ({ slice }) => {
             {d.cta_label || "Explore all domaines"}
           </PrismicNextLink>
         ) : (
-          <span className={styles.ctaButton}>
+          <a href="/en-us/domaines" className={styles.ctaButton}>
             {d.cta_label || "Explore all domaines"}
-          </span>
+          </a>
         )}
       </div>
     </section>

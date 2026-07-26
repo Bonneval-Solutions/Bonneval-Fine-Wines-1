@@ -1,0 +1,54 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "eyebrow": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Great wines & great men"
+      },
+      "title": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "The Pasha of Bonneval"
+      },
+      "body": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Claude Alexandre, Comte de Bonneval kept his finest Burgundy behind a library's wire-mesh doors.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "pull_quote": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Here is my library and my harem."
+      },
+      "attribution": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Mémoires de Casanova"
+      },
+      "cta_label": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Read our history →"
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "/en-us/about"
+        }
+      }
+    },
+    "items": []
+  }
+]

@@ -2,14 +2,14 @@
   "id": "members_hero",
   "type": "SharedSlice",
   "name": "MembersHero",
-  "description": "Dark hero section with large serif headline for members page",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Dark hero with eyebrow, headline, body",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Dark hero with eyebrow, headline, body",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -23,8 +23,8 @@
           "config": {
             "label": "Headline",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "heading1"
+            "single": "heading1",
+            "allowTargetBlank": false
           }
         },
         "body": {
@@ -32,13 +32,13 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Dark hero section with large serif headline for members page"
 }

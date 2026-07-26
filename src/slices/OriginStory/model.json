@@ -2,14 +2,14 @@
   "id": "origin_story",
   "type": "SharedSlice",
   "name": "OriginStory",
-  "description": "Two-column origin story with sticky image and narrative",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Sticky archival image left, long narrative right with blockquote",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Sticky archival image left, long narrative right with blockquote",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -31,8 +31,8 @@
           "config": {
             "label": "Headline",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "heading1"
+            "single": "heading1",
+            "allowTargetBlank": false
           }
         },
         "body": {
@@ -40,8 +40,8 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "pull_quote": {
@@ -52,8 +52,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Two-column origin story with sticky image and narrative"
 }

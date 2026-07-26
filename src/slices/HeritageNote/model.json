@@ -1,0 +1,66 @@
+{
+  "id": "heritage_note",
+  "name": "HeritageNote",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Default",
+      "docURL": "",
+      "imageUrl": "",
+      "version": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": "Great wines & great men"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": "The Pasha of Bonneval"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "Short anecdote",
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "pull_quote": {
+          "type": "Text",
+          "config": {
+            "label": "Pull Quote",
+            "placeholder": "Optional quote"
+          }
+        },
+        "attribution": {
+          "type": "Text",
+          "config": {
+            "label": "Attribution",
+            "placeholder": "Casanova"
+          }
+        },
+        "cta_label": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Label",
+            "placeholder": "Read our history"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link"
+          }
+        }
+      }
+    }
+  ]
+}

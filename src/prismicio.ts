@@ -4,7 +4,7 @@ import {
   Route,
 } from "@prismicio/client";
 import { enableAutoPreviews } from "@prismicio/next";
-import sm from "../slicemachine.config.json";
+import sm from "../prismic.config.json";
 
 /**
  * The project's Prismic repository name.
@@ -17,6 +17,7 @@ export const repositoryName =
  */
 const routes: Route[] = [
   { type: "page", uid: "home", path: "/:lang" },
+  { type: "page", uid: "domaines", path: "/:lang/domaines" },
   { type: "page", path: "/:lang/:uid" },
   { type: "domaine", path: "/:lang/domaines/:uid" },
 ];
@@ -28,14 +29,18 @@ const routes: Route[] = [
  * @param config - Configuration for the Prismic client.
  */
 export function createClient(config: ClientConfig = {}) {
-  const client = baseCreateClient(sm.apiEndpoint || repositoryName, {
-    routes,
-    fetchOptions:
-      process.env.NODE_ENV === "production"
-        ? { next: { tags: ["prismic"] }, cache: "force-cache" }
-        : { next: { revalidate: 5 } },
-    ...config,
-  });
+  const client = baseCreateClient(
+    (sm as { apiEndpoint?: string }).apiEndpoint || repositoryName,
+    {
+      routes,
+      accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+      fetchOptions:
+        process.env.NODE_ENV === "production"
+          ? { next: { tags: ["prismic"] }, cache: "force-cache" }
+          : { next: { revalidate: 5 } },
+      ...config,
+    },
+  );
 
   enableAutoPreviews({ client });
 

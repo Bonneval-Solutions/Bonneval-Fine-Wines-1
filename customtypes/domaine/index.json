@@ -1,9 +1,7 @@
 {
   "id": "domaine",
   "label": "Domaine",
-  "format": "page",
   "repeatable": true,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -32,7 +30,10 @@
         "config": {
           "label": "Colour",
           "placeholder": "Wine colour",
-          "options": ["rouge", "blanc"]
+          "options": [
+            "rouge",
+            "blanc"
+          ]
         }
       },
       "descriptor": {
@@ -61,8 +62,8 @@
         "config": {
           "label": "The Place",
           "placeholder": "Terroir description — soil, aspect, altitude",
-          "allowTargetBlank": false,
-          "multi": "paragraph"
+          "multi": "paragraph",
+          "allowTargetBlank": false
         }
       },
       "the_family": {
@@ -70,8 +71,8 @@
         "config": {
           "label": "The Family",
           "placeholder": "Generational story, philosophy",
-          "allowTargetBlank": false,
-          "multi": "paragraph"
+          "multi": "paragraph",
+          "allowTargetBlank": false
         }
       },
       "our_relationship": {
@@ -79,8 +80,8 @@
         "config": {
           "label": "Our Relationship",
           "placeholder": "How Bonneval connected with this domaine",
-          "allowTargetBlank": false,
-          "multi": "paragraph"
+          "multi": "paragraph",
+          "allowTargetBlank": false
         }
       },
       "pull_quote_fr": {
@@ -125,5 +126,7 @@
         }
       }
     }
-  }
+  },
+  "status": true,
+  "format": "page"
 }

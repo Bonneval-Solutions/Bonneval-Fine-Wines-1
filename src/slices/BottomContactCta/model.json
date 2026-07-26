@@ -2,14 +2,14 @@
   "id": "bottom_contact_cta",
   "type": "SharedSlice",
   "name": "BottomContactCta",
-  "description": "Compact bottom CTA with callback/contact form",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Small CTA section with request-a-callback style form",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Small CTA section with request-a-callback style form",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -30,8 +30,8 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "single": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "submit_label": {
@@ -49,8 +49,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Compact bottom CTA with callback/contact form"
 }

@@ -84,7 +84,8 @@
       "siteKey": "0x4AAAAAAD8UPuhR6Sl_h4Yr"
     },
     "brevo": {
-      "listId": "3"
+      "inboundListId": "4",
+      "callbacksListId": "5"
     },
     "vercel": {
       "projectId": "",

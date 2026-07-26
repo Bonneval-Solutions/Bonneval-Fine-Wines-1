@@ -2,14 +2,14 @@
   "id": "membership_tiers",
   "type": "SharedSlice",
   "name": "MembershipTiers",
-  "description": "Two-column tier comparison on dark background",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Membership tier cards with benefits list",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Membership tier cards with benefits list",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -60,8 +60,8 @@
           "config": {
             "label": "Benefits",
             "placeholder": "One benefit per line",
-            "allowTargetBlank": false,
-            "multi": "list-item"
+            "multi": "list-item",
+            "allowTargetBlank": false
           }
         },
         "is_featured": {
@@ -78,8 +78,8 @@
             "placeholder": "Apply for membership"
           }
         }
-      },
-      "imageUrl": ""
+      }
     }
-  ]
+  ],
+  "description": "Two-column tier comparison on dark background"
 }

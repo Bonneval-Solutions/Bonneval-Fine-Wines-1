@@ -2,14 +2,14 @@
   "id": "contact_blocks",
   "type": "SharedSlice",
   "name": "ContactBlocks",
-  "description": "3-card grid for contact methods",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Three contact cards: WhatsApp, Email, Visit",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Three contact cards: WhatsApp, Email, Visit",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -60,8 +60,8 @@
           "config": {
             "label": "Secondary Text",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "single": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "cta_label": {
@@ -75,11 +75,12 @@
           "type": "Link",
           "config": {
             "label": "CTA Link (optional)",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         }
-      },
-      "imageUrl": ""
+      }
     }
-  ]
+  ],
+  "description": "3-card grid for contact methods"
 }

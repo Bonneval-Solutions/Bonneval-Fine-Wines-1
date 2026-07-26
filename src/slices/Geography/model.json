@@ -2,14 +2,14 @@
   "id": "geography",
   "type": "SharedSlice",
   "name": "Geography",
-  "description": "Two-column on dark background for geography and advantage",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Two columns: Why Bulgaria left, Outside the crowd right",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Two columns: Why Bulgaria left, Outside the crowd right",
       "primary": {
         "col_left_label": {
           "type": "Text",
@@ -30,8 +30,8 @@
           "config": {
             "label": "Left Column Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "col_right_label": {
@@ -53,13 +53,13 @@
           "config": {
             "label": "Right Column Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Two-column on dark background for geography and advantage"
 }

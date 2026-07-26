@@ -2,14 +2,14 @@
   "id": "whats_app_preview",
   "type": "SharedSlice",
   "name": "WhatsAppPreview",
-  "description": "Two-column with editorial text and stylised WhatsApp message mock",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "WhatsApp allocation preview with sample message",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "WhatsApp allocation preview with sample message",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -30,8 +30,8 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "sample_wine_name": {
@@ -46,8 +46,8 @@
           "config": {
             "label": "Sample Narrative",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "single": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "sample_price": {
@@ -65,8 +65,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Two-column with editorial text and stylised WhatsApp message mock"
 }

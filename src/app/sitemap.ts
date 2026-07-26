@@ -22,7 +22,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   for (const page of pages) {
     const lang = normalizeLocale(page.lang) ?? defaultLocale;
-    const path = page.uid === "home" ? `/${lang}` : `/${lang}/${page.uid}`;
+    const path =
+      page.uid === "home"
+        ? `/${lang}`
+        : page.uid === "domaines"
+          ? `/${lang}/domaines`
+          : `/${lang}/${page.uid}`;
     entries.push({
       url: `${base}${path}`,
       lastModified: page.last_publication_date

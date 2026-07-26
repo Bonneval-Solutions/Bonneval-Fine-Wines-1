@@ -5,6 +5,10 @@ import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { locales, normalizeLocale } from "@/i18n";
 import { notFound } from "next/navigation";
+import {
+  HOME_HERITAGE_DEFAULT,
+  ensureHeritageSprinkle,
+} from "@/lib/default-page-slices";
 
 type Params = { lang: string };
 const domainesGridFetchLinks = [
@@ -29,17 +33,16 @@ export default async function Home({
 
   if (!home) {
     return (
-      <section style={{ padding: "4rem 2rem", paddingTop: "calc(var(--header-height) + 4rem)", textAlign: "center" }}>
-        <h1>Bonneval Fine Wines</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </section>
+      <SliceZone slices={[HOME_HERITAGE_DEFAULT]} components={components} />
     );
   }
 
-  return <SliceZone slices={home.data.slices} components={components} />;
+  const slices = ensureHeritageSprinkle(
+    home.data.slices,
+    HOME_HERITAGE_DEFAULT,
+  );
+
+  return <SliceZone slices={slices} components={components} />;
 }
 
 export async function generateMetadata({

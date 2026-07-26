@@ -2,14 +2,14 @@
   "id": "members_teaser",
   "type": "SharedSlice",
   "name": "MembersTeaser",
-  "description": "Full-width dark CTA for members section",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Dark background CTA with headline, body, and gold button",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Dark background CTA with headline, body, and gold button",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -23,8 +23,8 @@
           "config": {
             "label": "Headline",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "heading2"
+            "single": "heading2",
+            "allowTargetBlank": false
           }
         },
         "body": {
@@ -32,8 +32,8 @@
           "config": {
             "label": "Body",
             "placeholder": "",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "cta_label": {
@@ -47,12 +47,13 @@
           "type": "Link",
           "config": {
             "label": "CTA Link",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Full-width dark CTA for members section"
 }

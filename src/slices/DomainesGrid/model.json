@@ -2,14 +2,14 @@
   "id": "domaines_grid",
   "type": "SharedSlice",
   "name": "DomainesGrid",
-  "description": "5x2 grid of domaine cards with hover effect",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Grid of domaine producer cards linked to domaine pages",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Grid of domaine producer cards linked to domaine pages",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -36,7 +36,8 @@
           "type": "Link",
           "config": {
             "label": "CTA Link",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         }
       },
@@ -46,7 +47,9 @@
           "config": {
             "label": "Domaine",
             "select": "document",
-            "customtypes": ["domaine"]
+            "customtypes": [
+              "domaine"
+            ]
           }
         },
         "card_image": {
@@ -57,8 +60,8 @@
             "thumbnails": []
           }
         }
-      },
-      "imageUrl": ""
+      }
     }
-  ]
+  ],
+  "description": "5x2 grid of domaine cards with hover effect"
 }

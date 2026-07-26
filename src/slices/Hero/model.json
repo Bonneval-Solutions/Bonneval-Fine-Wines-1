@@ -2,22 +2,22 @@
   "id": "hero",
   "type": "SharedSlice",
   "name": "Hero",
-  "description": "Homepage hero",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Hero with headline, CTAs and optional background",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Hero with headline, CTAs and optional background",
       "primary": {
         "headline": {
           "type": "StructuredText",
           "config": {
             "label": "Headline",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "heading1",
+            "allowTargetBlank": true
           }
         },
         "subheadline": {
@@ -25,8 +25,8 @@
           "config": {
             "label": "Subheadline",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "paragraph",
+            "allowTargetBlank": true
           }
         },
         "eyebrow": {
@@ -61,7 +61,8 @@
           "type": "Link",
           "config": {
             "label": "Primary CTA link",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         },
         "secondary_cta_label": {
@@ -75,7 +76,8 @@
           "type": "Link",
           "config": {
             "label": "Secondary CTA link",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         },
         "background_image": {
@@ -87,8 +89,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "Homepage hero"
 }

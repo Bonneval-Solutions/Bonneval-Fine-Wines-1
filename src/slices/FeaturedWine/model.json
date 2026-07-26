@@ -2,14 +2,14 @@
   "id": "featured_wine",
   "type": "SharedSlice",
   "name": "FeaturedWine",
-  "description": "Editorial two-column featured wine section on dark background",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Featured wine with bottle image and terroir narrative",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Featured wine with bottle image and terroir narrative",
       "primary": {
         "label": {
           "type": "Text",
@@ -52,15 +52,19 @@
           "config": {
             "label": "Narrative",
             "placeholder": "Terroir-first description",
-            "allowTargetBlank": false,
-            "multi": "paragraph"
+            "multi": "paragraph",
+            "allowTargetBlank": false
           }
         },
         "availability": {
           "type": "Select",
           "config": {
             "label": "Availability",
-            "options": ["Available now", "Allocation only", "Pre-arrival"]
+            "options": [
+              "Available now",
+              "Allocation only",
+              "Pre-arrival"
+            ]
           }
         },
         "cta_label": {
@@ -74,12 +78,13 @@
           "type": "Link",
           "config": {
             "label": "CTA Link",
-            "placeholder": ""
+            "placeholder": "",
+            "select": null
           }
         }
       },
-      "items": {},
-      "imageUrl": ""
+      "items": {}
     }
-  ]
+  ],
+  "description": "Editorial two-column featured wine section on dark background"
 }

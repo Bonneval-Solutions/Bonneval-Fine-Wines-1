@@ -14,18 +14,18 @@ type HeaderProps = {
   lang: string;
 };
 
-const placeholderLinks = [
-  { label: "The Wines", href: "#" },
-  { label: "Domaines", href: "#" },
-  { label: "Members", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
-];
-
 export function Header({ config, lang }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+
+  const placeholderLinks = [
+    { label: "The Wines", href: `/${lang}/wines` },
+    { label: "Our Domaines", href: `/${lang}/domaines` },
+    { label: "Members", href: `/${lang}/members` },
+    { label: "Our History", href: `/${lang}/about` },
+    { label: "Contact", href: `/${lang}/contact` },
+  ];
 
   const isHome =
     pathname === `/${lang}` || pathname === `/${lang}/`;
@@ -88,7 +88,7 @@ export function Header({ config, lang }: HeaderProps) {
                   <a
                     key={link.label}
                     href={link.href}
-                    className={styles.navLink}
+                    className={`${styles.navLink} ${isActive(link.href) ? styles.active : ""}`}
                   >
                     {link.label}
                   </a>
@@ -141,7 +141,7 @@ export function Header({ config, lang }: HeaderProps) {
               <a
                 key={link.label}
                 href={link.href}
-                className={styles.mobileNavLink}
+                className={`${styles.mobileNavLink} ${isActive(link.href) ? styles.active : ""}`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

@@ -8,21 +8,21 @@ type FooterProps = {
   lang?: string;
 };
 
-const placeholderNavLinks = [
-  "The Wines",
-  "The Domaines",
-  "Members",
-  "About",
-  "Contact",
-];
-
-export function Footer({ config }: FooterProps) {
+export function Footer({ config, lang = "en-us" }: FooterProps) {
   const hasLinks = config?.footer_links && config.footer_links.length > 0;
   const email = config?.email || company.contact.email || "";
   const address = config?.address || "";
   const city = company.address?.city || "";
   const country = company.address?.country || "";
   const placeLine = [city, country].filter(Boolean).join(", ");
+
+  const placeholderNavLinks = [
+    { label: "The Wines", href: `/${lang}/wines` },
+    { label: "Our Domaines", href: `/${lang}/domaines` },
+    { label: "Members", href: `/${lang}/members` },
+    { label: "Our History", href: `/${lang}/about` },
+    { label: "Contact", href: `/${lang}/contact` },
+  ];
 
   return (
     <footer className={styles.footer}>
@@ -38,10 +38,10 @@ export function Footer({ config }: FooterProps) {
                   {item.label}
                 </PrismicNextLink>
               ))
-            : placeholderNavLinks.map((label) => (
-                <span key={label} className={styles.navLink}>
-                  {label}
-                </span>
+            : placeholderNavLinks.map((link) => (
+                <a key={link.label} href={link.href} className={styles.navLink}>
+                  {link.label}
+                </a>
               ))}
         </div>
 

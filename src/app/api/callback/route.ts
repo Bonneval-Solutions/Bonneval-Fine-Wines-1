@@ -96,7 +96,11 @@ export async function POST(req: NextRequest) {
   // Brevo contacts require an email — only list when provided; always notify Jean.
   if (payload.email) {
     try {
-      await addBrevoContact({ email: payload.email, attributes });
+      await addBrevoContact({
+        email: payload.email,
+        attributes,
+        list: "callbacks",
+      });
     } catch (err) {
       console.error("[callback] Brevo contacts error:", err);
       return NextResponse.json(

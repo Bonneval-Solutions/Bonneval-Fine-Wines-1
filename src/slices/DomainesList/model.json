@@ -2,14 +2,14 @@
   "id": "domaines_list",
   "type": "SharedSlice",
   "name": "DomainesList",
-  "description": "2x5 card grid with image and domaine details",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Two-column domaine cards with image left, details right",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Two-column domaine cards with image left, details right",
       "primary": {
         "eyebrow": {
           "type": "Text",
@@ -24,6 +24,17 @@
             "label": "Headline",
             "placeholder": "The ten houses of Bonneval"
           }
+        },
+        "source": {
+          "type": "Select",
+          "config": {
+            "label": "Source",
+            "default_value": "Manual",
+            "options": [
+              "Manual",
+              "All domaines"
+            ]
+          }
         }
       },
       "items": {
@@ -32,7 +43,9 @@
           "config": {
             "label": "Domaine",
             "select": "document",
-            "customtypes": ["domaine"]
+            "customtypes": [
+              "domaine"
+            ]
           }
         },
         "card_image": {
@@ -61,7 +74,10 @@
           "type": "Select",
           "config": {
             "label": "Colour",
-            "options": ["rouge", "blanc"]
+            "options": [
+              "rouge",
+              "blanc"
+            ]
           }
         },
         "descriptor": {
@@ -71,8 +87,8 @@
             "placeholder": "Short description"
           }
         }
-      },
-      "imageUrl": ""
+      }
     }
-  ]
+  ],
+  "description": "2x5 card grid with image and domaine details"
 }

@@ -1,9 +1,7 @@
 {
   "id": "layout",
   "label": "Site settings",
-  "format": "custom",
   "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "site_title": {
@@ -46,8 +44,8 @@
               "type": "Link",
               "config": {
                 "label": "Link",
-                "allowTargetBlank": false,
-                "select": null
+                "select": null,
+                "allowTargetBlank": false
               }
             }
           }
@@ -79,8 +77,8 @@
               "type": "Link",
               "config": {
                 "label": "Link",
-                "allowTargetBlank": false,
-                "select": null
+                "select": null,
+                "allowTargetBlank": false
               }
             }
           }
@@ -108,5 +106,7 @@
         }
       }
     }
-  }
+  },
+  "status": true,
+  "format": "custom"
 }
