@@ -5,7 +5,7 @@
 }
 
 .sectionFollow {
-  padding-top: var(--section-padding);
+  padding-top: 88px;
 }
 
 .grid {
@@ -17,11 +17,16 @@
   margin: 0 auto;
 }
 
+.grid.imageRight {
+  grid-template-columns: 7fr 5fr;
+}
+
 .imageCol {
   position: sticky;
   top: 100px;
   height: 580px;
   overflow: hidden;
+  border-radius: 6px;
 }
 
 .imageCol img {
@@ -48,6 +53,7 @@
 
 .textCol {
   padding-top: 8px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -106,7 +112,7 @@
   }
 
   .sectionFollow {
-    padding-top: var(--section-padding);
+    padding-top: 64px;
   }
 
   .grid {
@@ -128,10 +134,11 @@
   }
 
   .sectionFollow {
-    padding-top: var(--section-padding);
+    padding-top: 56px;
   }
 
-  .grid {
+  .grid,
+  .grid.imageRight {
     grid-template-columns: 1fr;
     gap: 32px;
   }
@@ -140,6 +147,11 @@
     position: relative;
     top: auto;
     height: 300px;
+  }
+
+  /* On mobile, keep image above text regardless of desktop toggle */
+  .grid.imageRight .imageCol {
+    order: -1;
   }
 
   .headline :global(h1) {

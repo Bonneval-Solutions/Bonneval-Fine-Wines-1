@@ -1,8 +1,40 @@
 .section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--bv-noir);
   padding: 88px 80px;
   text-align: center;
   padding-top: calc(var(--header-height) + 88px);
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(60, 20, 28, 0.55) 0%,
+      rgba(60, 20, 28, 0.82) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
 }
 
 .eyebrow {

@@ -203,6 +203,7 @@ export type ApplicationFormSlice = prismic.SharedSlice<
 interface OriginStorySliceDefaultPrimary {
   eyebrow: prismic.KeyTextField;
   archival_image: prismic.ImageField<never>;
+  image_position: prismic.BooleanField;
   headline: prismic.RichTextField;
   body: prismic.RichTextField;
   pull_quote: prismic.KeyTextField;

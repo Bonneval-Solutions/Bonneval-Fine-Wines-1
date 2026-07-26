@@ -122,6 +122,7 @@ function originStory(
     primary: {
       eyebrow: primary.eyebrow,
       archival_image: {},
+      image_position: false,
       headline: h1(primary.headline),
       body: rt(primary.body),
       pull_quote: primary.pull_quote || null,

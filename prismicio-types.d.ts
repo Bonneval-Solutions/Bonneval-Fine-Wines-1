@@ -1144,6 +1144,27 @@ export interface HeritageNoteSliceDefaultPrimary {
 	title: prismic.KeyTextField;
 	
 	/**
+	 * Photo (optional) field in *HeritageNote → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: heritage_note.default.primary.photo
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	photo: prismic.ImageField<never>;
+	
+	/**
+	 * Photo on right field in *HeritageNote → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: heritage_note.default.primary.image_position
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	image_position: prismic.BooleanField;
+	
+	/**
 	 * Body field in *HeritageNote → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
@@ -1461,6 +1482,16 @@ export interface MembersHeroSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	body: prismic.RichTextField;
+	
+	/**
+	 * Background image (optional) field in *MembersHero → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: members_hero.default.primary.background_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	background_image: prismic.ImageField<never>;
 }
 
 /**
@@ -1711,6 +1742,17 @@ export interface OriginStorySliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
 	archival_image: prismic.ImageField<never>;
+
+	/**
+	 * Image on right field in *OriginStory → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: origin_story.default.primary.image_position
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	image_position: prismic.BooleanField;
 	
 	/**
 	 * Headline field in *OriginStory → Default → Primary*

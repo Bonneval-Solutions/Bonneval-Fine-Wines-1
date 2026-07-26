@@ -35,6 +35,14 @@
             "multi": "paragraph",
             "allowTargetBlank": false
           }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background image (optional)",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

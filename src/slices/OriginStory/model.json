@@ -26,6 +26,15 @@
             "thumbnails": []
           }
         },
+        "image_position": {
+          "type": "Boolean",
+          "config": {
+            "label": "Image on right",
+            "default_value": false,
+            "placeholder_false": "Left",
+            "placeholder_true": "Right"
+          }
+        },
         "headline": {
           "type": "StructuredText",
           "config": {

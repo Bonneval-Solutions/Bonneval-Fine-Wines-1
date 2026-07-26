@@ -13,6 +13,23 @@
         "type": "Text",
         "value": "The Pasha of Bonneval"
       },
+      "photo": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1578926375605-eaf7559b075f?auto=format&fit=crop&w=900&q=80",
+          "width": 900,
+          "height": 1200
+        },
+        "url": "https://images.unsplash.com/photo-1578926375605-eaf7559b075f?auto=format&fit=crop&w=900&q=80",
+        "width": 900,
+        "height": 1200,
+        "alt": "Heritage portrait"
+      },
+      "image_position": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
       "body": {
         "__TYPE__": "StructuredTextContent",
         "value": [

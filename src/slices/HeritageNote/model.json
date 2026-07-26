@@ -25,6 +25,23 @@
             "placeholder": "The Pasha of Bonneval"
           }
         },
+        "photo": {
+          "type": "Image",
+          "config": {
+            "label": "Photo (optional)",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_position": {
+          "type": "Boolean",
+          "config": {
+            "label": "Photo on right",
+            "default_value": false,
+            "placeholder_false": "Left",
+            "placeholder_true": "Right"
+          }
+        },
         "body": {
           "type": "StructuredText",
           "config": {

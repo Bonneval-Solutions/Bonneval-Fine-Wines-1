@@ -9,6 +9,27 @@
   text-align: center;
 }
 
+.inner.withPhoto {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 72px;
+  align-items: center;
+  max-width: var(--max-width);
+  text-align: left;
+}
+
+.textCol {
+  min-width: 0;
+}
+
+.withPhoto .eyebrow {
+  margin-bottom: 16px;
+}
+
+.withPhoto .divider {
+  margin: 0 0 24px;
+}
+
 .eyebrow {
   font-family: var(--font-sans);
   font-size: 10px;
@@ -35,6 +56,18 @@
   margin: 0 auto 28px;
 }
 
+.photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.photo img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .body :global(p) {
   font-family: var(--font-sans);
   font-size: 14px;
@@ -55,6 +88,12 @@
   margin: 32px auto 0;
   max-width: 560px;
   text-align: left;
+}
+
+.withPhoto .blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
 }
 
 .blockquote p {
@@ -93,12 +132,40 @@
 }
 
 @media (max-width: 1024px) {
+  .inner.withPhoto {
+    gap: 48px;
+  }
+
   .title {
     font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
+  .inner.withPhoto {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .withPhoto .divider {
+    margin: 0 auto 24px;
+  }
+
+  .withPhoto .blockquote {
+    text-align: left;
+  }
+
+  .photo {
+    aspect-ratio: 4 / 5;
+    max-height: 420px;
+  }
+
+  /* On mobile, keep photo above text regardless of desktop toggle */
+  .inner.withPhoto.photoRight .photo {
+    order: -1;
+  }
+
   .title {
     font-size: 28px;
   }

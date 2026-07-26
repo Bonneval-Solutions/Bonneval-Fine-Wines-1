@@ -1,0 +1,62 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "eyebrow": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Our mission"
+      },
+      "archival_image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
+          "width": 900,
+          "height": 1200
+        },
+        "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
+        "width": 900,
+        "height": 1200,
+        "alt": "Cellar archival photograph"
+      },
+      "image_position": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "headline": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "A family négociant, a cellar of rare wines, and relationships built over decades.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "body": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Bonneval Fine Wines is a family négociant with a cellar of nearly 15,000 bottles.",
+              "spans": []
+            },
+            "direction": "ltr"
+          }
+        ]
+      },
+      "pull_quote": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "The constraint is the brand."
+      }
+    },
+    "items": []
+  }
+]

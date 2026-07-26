@@ -1,0 +1,11 @@
+---
+description: Prismic workflow — no MCP, Slice Machine push, Migration API only on request
+alwaysApply: true
+---
+
+# Prismic Workflow
+
+- **Never** connect to, authenticate, or call the Prismic MCP server.
+- Edit slice models (`model.json`), mocks, components, and types locally.
+- Tell the user when models are ready — they push via Slice Machine. Do not run `prismic push` unless asked.
+- Use the Prismic Migration / Write API **only** when the user explicitly asks for it.

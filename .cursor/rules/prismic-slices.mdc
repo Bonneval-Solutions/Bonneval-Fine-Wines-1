@@ -12,5 +12,5 @@ alwaysApply: false
 - Type props: `SliceComponentProps<Content.XxxSlice>` from `@prismicio/client` and `@prismicio/react`
 - Wrap in `<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>`
 - Server component by default (no `"use client"` unless interactive elements)
-- Use Prismic MCP tools for content modeling: `how_to_model_slice`, `how_to_code_slice`, `save_slice_data`
-- model.json and mocks.json are managed by Slice Machine — edit via MCP tools or Slice Machine UI, not manually
+- Edit `model.json` / `mocks.json` / components locally; user pushes via Slice Machine
+- Never use Prismic MCP; Migration API only when the user explicitly asks
