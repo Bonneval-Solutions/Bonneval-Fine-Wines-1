@@ -25,6 +25,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.97",
     "@types/negotiator": "^0.6.4",
     "@types/node": "24.10.2",
     "@types/react": "19.2.7",
@@ -32,6 +33,7 @@
     "concurrently": "9.2.1",
     "eslint": "9.39.1",
     "eslint-config-next": "16.0.8",
+    "slice-machine-ui": "^2.21.4",
     "typescript": "5.9.3"
   }
 }
